@@ -1,0 +1,13 @@
+# PureteGO - robots.txt
+# https://www.puretego.online/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.puretego.online/sitemap.xml
+
+# Disallow admin and private folders (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$

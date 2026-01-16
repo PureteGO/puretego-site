@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q84QCMPH42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q84QCMPH42');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | PureteGO - Artículos de Marketing Digital y SEO</title>
+    <meta name="description"
+        content="Artículos, guías y consejos sobre marketing digital, SEO local, GeoMarketing y más. Aprende cómo hacer crecer tu negocio online en Paraguay.">
+    <meta name="keywords"
+        content="blog marketing digital, artículos SEO, consejos negocios, guías marketing, tips empresas">
+    <link rel="canonical" href="https://www.puretego.online/blog/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .blog-hero {
+            background: var(--gradient-dark);
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.125rem;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+
+        .blog-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .blog-article {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 1.5rem;
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+
+        .blog-article:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .blog-article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-article-content {
+            padding: 1.5rem 1.5rem 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blog-article-meta {
+            font-size: 0.875rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-article h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-article h2 a:hover {
+            color: var(--color-primary);
+        }
+
+        .blog-article p {
+            color: rgba(12, 12, 13, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        .sidebar-widget {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .sidebar-widget ul li {
+            padding: 0.5rem 0;
+        }
+
+        .sidebar-widget ul li a:hover {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 900px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-article {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-article-content {
+                padding: 1.5rem;
+            }
+
+            .blog-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="../img/logo.png" alt="PureteGO" width="180" height="40"></a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="/" class="nav-link">Inicio</a></li>
+                        <li><a href="/#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="/blog/" class="nav-link">Blog</a></li>
+                        <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                    <a href="https://wa.me/595983500802" class="btn btn-primary" target="_blank">Consultoría Gratis</a>
+                    <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Blog <span class="text-gradient">PureteGO</span></h1>
+            <p>Artículos, guías y consejos para hacer crecer tu negocio online</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="container">
+        <div class="blog-container">
+            <!-- Articles -->
+            <div class="blog-list">
+                <article class="blog-article fade-in">
+                    <img src="../img/blog/seo-local-google.jpg" alt="SEO Local Google" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <span class="blog-article-meta">SEO Local • 16 Enero 2026</span>
+                        <h2><a href="articulos/como-aparecer-primeras-posiciones-google.html">Cómo aparecer en las
+                                primeras posiciones de Google</a></h2>
+                        <p>Descubre las estrategias más efectivas para posicionar tu negocio local en los resultados de
+                            búsqueda de Google y atraer más clientes.</p>
+                    </div>
+                </article>
+
+                <article class="blog-article fade-in">
+                    <img src="../img/blog/google-mi-negocio.jpg" alt="Google Mi Negocio" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <span class="blog-article-meta">Google Mi Negocio • 14 Enero 2026</span>
+                        <h2><a href="articulos/guia-google-mi-negocio.html">Guía completa: Google Mi Negocio para
+                                empresas locales</a></h2>
+                        <p>Todo lo que necesitas saber para optimizar tu perfil empresarial en Google y convertir
+                            búsquedas en clientes.</p>
+                    </div>
+                </article>
+
+                <article class="blog-article fade-in">
+                    <img src="../img/blog/geomarketing.jpg" alt="GeoMarketing" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <span class="blog-article-meta">GeoMarketing • 12 Enero 2026</span>
+                        <h2><a href="articulos/geomarketing-vender-mas-zona.html">GeoMarketing: La estrategia para
+                                vender más en tu zona</a></h2>
+                        <p>Aprende cómo el marketing geolocalizado puede transformar las ventas de tu negocio local y
+                            atraer clientes cercanos.</p>
+                    </div>
+                </article>
+
+                <article class="blog-article fade-in">
+                    <img src="../img/blog/sitio-web-profesional.jpg" alt="Sitio Web Profesional"
+                        class="blog-article-image">
+                    <div class="blog-article-content">
+                        <span class="blog-article-meta">Diseño Web • 10 Enero 2026</span>
+                        <h2><a href="articulos/diferencias-sitio-amateur-profesional.html">5 diferencias entre un sitio
+                                web amateur y uno profesional</a></h2>
+                        <p>Conoce qué hace que un sitio web sea profesional y cómo esto impacta en la percepción de tu
+                            marca.</p>
+                    </div>
+                </article>
+
+                <article class="blog-article fade-in">
+                    <img src="../img/blog/seo-2026.jpg" alt="SEO 2026" class="blog-article-image">
+                    <div class="blog-article-content">
+                        <span class="blog-article-meta">SEO • 8 Enero 2026</span>
+                        <h2><a href="articulos/seo-local-por-que-tu-negocio-necesita.html">¿Qué es el SEO Local y por
+                                qué tu negocio lo necesita?</a></h2>
+                        <p>Entiende qué es el SEO local, cómo funciona y por qué es fundamental para cualquier negocio
+                            con presencia física.</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#">SEO Local</a></li>
+                        <li><a href="#">Google Mi Negocio</a></li>
+                        <li><a href="#">GeoMarketing</a></li>
+                        <li><a href="#">Diseño Web</a></li>
+                        <li><a href="#">Marketing Digital</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>¿Necesitas ayuda?</h3>
+                    <p style="font-size: 0.9rem; color: rgba(12,12,13,0.7); margin-bottom: 1rem;">Solicita una
+                        consultoría gratuita y descubre cómo podemos ayudarte.</p>
+                    <a href="https://wa.me/595983500802" class="btn btn-primary" style="width: 100%;"
+                        target="_blank">Contactar</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../img/logo.png" alt="PureteGO" width="180" height="40">
+                    <p>Blog de marketing digital y SEO local.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="/servicios/geomarketing.html">GeoMarketing</a></li>
+                        <li><a href="/servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
+                        <li><a href="/servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/595983500802" target="_blank">📱 +595 983 500 802</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PureteGO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/595983500802" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

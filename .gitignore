@@ -1,0 +1,17 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos ZIP (não versionar)
+*.zip
+
+# Arquivos de editor
+*.swp
+*.swo
+*~
+
+# Node modules (se usar npm)
+node_modules/
+
+# Logs
+*.log
