@@ -125,7 +125,7 @@ function initSmoothScroll() {
 /* ===== WhatsApp Helper ===== */
 function openWhatsApp(message = '') {
   const phoneNumber = '595983500802';
-  const encodedMessage = encodeURIComponent(message || '¡Hola! Me gustaría obtener más información sobre sus servicios.');
+  const encodedMessage = encodeURIComponent(message || '¡Hola! 👋 Vi su sitio web y me interesa saber cómo pueden ayudarme a posicionar mi negocio en Google. ¿Podemos agendar una consultoría gratuita?');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   window.open(whatsappUrl, '_blank');
 }
@@ -139,7 +139,7 @@ function handleContactForm(formId) {
     e.preventDefault();
 
     const formData = new FormData(form);
-    let message = '¡Hola! Estoy interesado en sus servicios.\n\n';
+    let message = '¡Hola! 👋 Me contacto desde su sitio web y estoy interesado/a en sus servicios de marketing digital.\n\n';
 
     formData.forEach((value, key) => {
       if (value) {
