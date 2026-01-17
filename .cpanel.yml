@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/puretego/public_html/
+    - /bin/cp -R * $DEPLOYPATH
