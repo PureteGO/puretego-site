@@ -258,8 +258,30 @@ function initDailyVerse() {
   verseContainer.innerHTML = `<span class="verse-text">"${verse.text}"</span> <span class="verse-ref">— ${verse.ref}</span>`;
 }
 
-// Initialize FAQ and Daily Verse on DOMContentLoaded
+/* ===== Scroll Up Button ===== */
+function initScrollUp() {
+  const scrollUp = document.getElementById('scroll-up');
+  if (!scrollUp) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 400) {
+      scrollUp.classList.add('show');
+    } else {
+      scrollUp.classList.remove('show');
+    }
+  });
+
+  scrollUp.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Initialize FAQ, Daily Verse and Scroll Up on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
   initFAQ();
   initDailyVerse();
+  initScrollUp();
 });

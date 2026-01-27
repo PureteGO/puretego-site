@@ -43,17 +43,23 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Optimized Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap">
+  </noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Schema.org LocalBusiness -->
+  <!-- Schema.org LocalBusiness (Expanded) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,9 +67,15 @@
     "name": "PureteGO",
     "description": "Agencia de Marketing Digital especializada en SEO Local y GeoMarketing en Paraguay",
     "url": "https://www.puretego.online",
+    "logo": "https://www.puretego.online/img/logo.png",
+    "image": "https://www.puretego.online/img/og-image.png",
     "telephone": "+595983500802",
+    "email": "contacto@puretego.online",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Nepal casi Valencia, Barrio San Luis",
+      "addressLocality": "San Lorenzo",
+      "addressRegion": "Central",
       "addressCountry": "PY"
     },
     "geo": {
@@ -71,10 +83,60 @@
       "latitude": "-25.2637",
       "longitude": "-57.5759"
     },
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
     "areaServed": ["Paraguay", "Brasil"],
     "sameAs": [
       "https://www.facebook.com/puretego",
-      "https://www.instagram.com/puretego"
+      "https://www.instagram.com/puretegoonline",
+      "https://www.youtube.com/@PureteGOOnline"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es PureteGO y cómo puede ayudar a mi negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PureteGO es un servicio completo que mejora la visibilidad en línea de tu negocio a través de SEO para Marketing Local, Presencia Web y Google My Business. Ayuda a aumentar el tráfico de tu sitio web, generar más clientes potenciales y mejorar el compromiso de los clientes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el SEO para Marketing Local?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Optimizamos tu perfil de negocio para aparecer en las primeras posiciones de Google Search y Google Maps, dirigiendo tráfico de alta calidad directamente a tu puerta. Esto incluye gestión de reseñas, publicaciones y actualización constante de información."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo lleva ver resultados con PureteGO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los primeros resultados suelen verse entre 30 y 45 días, pero el SEO es un proceso orgánico continuo. Nuestros clientes han experimentado crecimientos significativos en visibilidad en los primeros meses de trabajo conjunto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Y cuánto cuesta, cuál es el valor de la inversión?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En PureteGO ofrecemos soluciones inteligentes para todo tipo de empresa. Desde solo Gs. 3.500.000, te brindamos una presencia digital estratégica: optimización SEO en Google y Google Maps, planificación de palabras clave y sitio institucional. El hospedaje tiene un costo mensual de Gs. 75.000. Puedes invertir en hasta 3 cuotas sin intereses."
+        }
+      }
     ]
   }
   </script>
@@ -85,22 +147,44 @@
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/" class="logo">
+        <a href="index.html" class="logo">
           <img src="img/logo.png" alt="PureteGO - Marketing Digital Paraguay" width="180" height="40">
         </a>
 
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="/" class="nav-link">Inicio</a></li>
-            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item">
+              <a href="#servicios" class="nav-link">Servicios ▾</a>
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-title">Pacotes Digitales</div>
+                <a href="#planes">Start2GO - Gs. 1.500.000</a>
+                <a href="#planes">Biz2GO - Gs. 2.900.000</a>
+                <a href="#planes">Pro2GO - Gs. 3.900.000</a>
+                <div class="nav-dropdown-divider"></div>
+                <div class="nav-dropdown-title">Hosting Web</div>
+                <a href="servicios/hospedaje-web.html">Hospedaje Web</a>
+                <div class="nav-dropdown-divider"></div>
+                <div class="nav-dropdown-title">Otros Servicios</div>
+                <a href="servicios/geomarketing.html">GeoMarketing</a>
+                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Google</a>
+                <a href="servicios/creacion-sitios.html">Creación de Sitios Web</a>
+                <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+              </div>
+            </li>
             <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-            <li><a href="blog/" class="nav-link">Blog</a></li>
+            <li><a href="blog/index.html" class="nav-link">Blog</a></li>
             <li><a href="#contacto" class="nav-link">Contacto</a></li>
           </ul>
           <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20gustaría%20obtener%20una%20consultoría%20gratuita."
-            class="btn btn-primary" target="_blank" rel="noopener">
+            class="btn btn-primary" target="_blank" rel="noopener"
+            title="Gratis para empresas de Asunción y Gran Asunción (Lambaré, San Lorenzo, Luque, etc.)">
             Consultoría Gratis
           </a>
+          <div class="consultancy-note"
+            style="position: absolute; top: 100%; right: 0; width: 100%; white-space: nowrap; font-size: 0.65rem; color: rgba(255,255,255,0.6); text-align: right; padding-right: 5px; pointer-events: none;">
+            *Solo para empresas de Gran Asunción
+          </div>
           <button class="menu-toggle" aria-label="Menú">
             <span></span>
             <span></span>
@@ -136,7 +220,8 @@
           </div>
         </div>
         <div class="hero-image slide-in-right">
-          <img src="img/hero-app-mockup.png" alt="GeoMarketing y SEO Local - PureteGO" width="500" height="500">
+          <img src="img/hero-app-mockup.png" alt="GeoMarketing y SEO Local - PureteGO" width="500" height="500"
+            fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
@@ -161,7 +246,8 @@
             </svg>
           </div>
           <h3>GeoMarketing</h3>
-          <p>Atrae clientes de tu zona con estrategias de marketing geolocalizado y posicionamiento en Google Maps.</p>
+          <p>Atrae clientes de tu zona con estrategias de marketing geolocalizado y posicionamiento en Google Maps.
+          </p>
           <a href="servicios/geomarketing.html" class="service-link">
             Saber más <span>→</span>
           </a>
@@ -231,32 +317,243 @@
               <polyline points="2 12 12 17 22 12"></polyline>
             </svg>
           </div>
-          <h3>Marketing Digital</h3>
-          <p>Estrategias completas de marketing digital para aumentar tu visibilidad y ventas online.</p>
+          <h3>Gestión de Tráfico Pago</h3>
+          <p>Campañas en Google Ads, Meta Ads y TikTok Ads para maximizar tu ROI y generar ventas.</p>
           <a href="servicios/marketing-digital.html" class="service-link">
             Saber más <span>→</span>
           </a>
         </div>
 
-        <!-- Gestión de Tráfico Pago -->
+        <!-- Tours Virtuales 360° -->
         <div class="service-card fade-in">
           <div class="service-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <path d="M2 12h20"></path>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
             </svg>
           </div>
-          <h3>Gestión de Tráfico Pago</h3>
-          <p>Campañas de Google Ads optimizadas para maximizar tu retorno de inversión y atraer clientes cualificados.
-          </p>
-          <a href="https://wa.me/595983500802?text=Hola!%20Quiero%20información%20sobre%20Gestión%20de%20Tráfico%20Pago%20(Google%20Ads)"
+          <h3>Tours Virtuales 360°</h3>
+          <p>Muestra tu negocio desde adentro con recorridos virtuales profesionales en Google Maps y Google Street
+            View.</p>
+          <a href="https://wa.me/595983500802?text=Hola!%20Quiero%20información%20sobre%20Tours%20Virtuales%20360°"
             class="service-link" target="_blank" rel="noopener">
             Consultar <span>→</span>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="planes" class="section pricing-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Planes y <span class="text-gradient">Precios</span></h2>
+        <p>Soluciones escalables para cada etapa de tu negocio</p>
+        <div
+          style="background: rgba(1, 167, 238, 0.1); padding: 1rem; border-radius: var(--radius-lg); margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>💳 Facilidades de Pago:</strong> Financia tu
+            inversión en hasta 3 cuotas sin intereses (Entrega 40% + 2 pagos de 20% a 30/60 días).</p>
+          <p style="font-size: 0.85rem; opacity: 0.8;">*Excepto plan Start2GO: 2 pagos (Entrega 50% + saldo a 30
+            días).
+          </p>
+        </div>
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+        <!-- Start2GO -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Start2GO</h3>
+            <div class="pricing-price">
+              <span class="pricing-currency">Gs.</span>
+              1.500.000
+              <span class="pricing-period">/único</span>
+            </div>
+            <p class="pricing-desc">Para emprendedores y pequeños comercios.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Perfil de Empresa en Google Completo</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Configuración de dirección y horarios</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Carga de productos y servicios</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Enlace de productos con ubicación</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Link para reseñas Google</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Hasta 3 fotos 360°</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Start2GO"
+              class="btn btn-secondary">Comenzar</a>
+          </div>
+        </div>
+
+        <!-- Biz2GO -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Biz2GO</h3>
+            <div class="pricing-price">
+              <span class="pricing-currency">Gs.</span>
+              2.900.000
+              <span class="pricing-period">/único</span>
+            </div>
+            <p class="pricing-desc">Para profesionalizar tu presencia digital.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Todo lo de Start2GO</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg><strong>Landing Page</strong> de presentación</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Botón directo a WhatsApp</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Video institucional para perfil</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Hasta 5 fotos 360°</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Consultoría visual</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Biz2GO"
+              class="btn btn-secondary">Elegir Biz2GO</a>
+          </div>
+        </div>
+
+        <!-- Pro2GO -->
+        <div class="pricing-card featured fade-in">
+          <div class="pricing-badge">Popular</div>
+          <div class="pricing-header">
+            <h3 class="pricing-title">Pro2GO</h3>
+            <div class="pricing-price">
+              <span class="pricing-currency">Gs.</span>
+              3.900.000
+              <span class="pricing-period">/único</span>
+            </div>
+            <p class="pricing-desc">Salto de calidad en imagen y visibilidad.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Optimización Avanzada Google</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg><strong>Sitio Web Institucional (5 secc.)</strong></li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>SEO básico en sitio web</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Certificado SSL gratuito</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Video institucional</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Hasta 8 fotos 360°</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Entrenamiento mantenimiento Google</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Pro2GO" class="btn btn-primary">Elegir
+              Pro2GO</a>
+          </div>
+        </div>
+
+        <!-- Market2GO -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Market2GO</h3>
+            <div class="pricing-price">
+              <span class="pricing-currency">Gs.</span>
+              5.900.000
+              <span class="pricing-period">/único</span>
+            </div>
+            <p class="pricing-desc">Para empezar a vender online (catálogo).</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg><strong>Sitio con Catálogo (20 prod.)</strong></li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>SEO optimizado para catálogo</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Configuración correos profesionales</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>SSL dedicado</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Hasta 10 fotos 360°</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Entrenamiento gestión catálogo</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Market2GO"
+              class="btn btn-secondary">Elegir Market2GO</a>
+          </div>
+        </div>
+
+        <!-- e-commerce2GO -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <h3 class="pricing-title">e-commerce2GO</h3>
+            <div class="pricing-price">
+              <span class="pricing-currency">Gs.</span>
+              7.900.000
+              <span class="pricing-period">/único</span>
+            </div>
+            <p class="pricing-desc">Tienda virtual completa y optimizada.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Optimización Premium Google</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg><strong>Tienda Virtual Completa (50 prod.)</strong></li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>SEO Completo (sitio + tienda)</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Integración local/online total</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Hasta 12 fotos 360°</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>Entrenamiento administración tienda</li>
+          </ul>
+          <div class="pricing-footer">
+            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20e-commerce2GO"
+              class="btn btn-secondary">Elegir e-commerce</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -356,7 +653,8 @@
             </svg>
           </div>
           <h3>Resultados Medibles y Auditables</h3>
-          <p>Le proporcionamos informes claros y detallados sobre el rendimiento de su inversión, demostrando el impacto
+          <p>Le proporcionamos informes claros y detallados sobre el rendimiento de su inversión, demostrando el
+            impacto
             real de nuestras acciones.</p>
         </div>
 
@@ -370,7 +668,8 @@
             </svg>
           </div>
           <h3>Un Equipo de Expertos</h3>
-          <p>Contamos con profesionales altamente calificados y apasionados por el marketing digital, comprometidos con
+          <p>Contamos con profesionales altamente calificados y apasionados por el marketing digital, comprometidos
+            con
             la excelencia y la innovación.</p>
         </div>
 
@@ -382,7 +681,8 @@
             </svg>
           </div>
           <h3>Enfoque en el ROI</h3>
-          <p>Nuestro objetivo es que cada guaraní invertido en PureteGO se traduzca en un crecimiento significativo para
+          <p>Nuestro objetivo es que cada guaraní invertido en PureteGO se traduzca en un crecimiento significativo
+            para
             su negocio.</p>
         </div>
 
@@ -428,7 +728,8 @@
         <div class="testimonial-card fade-in">
           <h4 class="testimonial-title">Presencia web que genera resultados reales</h4>
           <p class="testimonial-text">"PureteGO comprendió desde el inicio nuestras metas de marketing digital y logró
-            potenciar nuestra presencia web. Con más de 2700 interacciones, experimentamos mayor visibilidad, tráfico y
+            potenciar nuestra presencia web. Con más de 2700 interacciones, experimentamos mayor visibilidad, tráfico
+            y
             reservas directas."</p>
           <div class="testimonial-author">
             <div class="testimonial-author-info">
@@ -441,7 +742,8 @@
 
         <div class="testimonial-card fade-in">
           <h4 class="testimonial-title">Resultados rápidos con estrategias locales</h4>
-          <p class="testimonial-text">"Al implementar el paquete completo de Google Mi Negocio y Presencia Web, logramos
+          <p class="testimonial-text">"Al implementar el paquete completo de Google Mi Negocio y Presencia Web,
+            logramos
             466 interacciones en solo 30 días. Esto fortaleció nuestra visibilidad local y generó reservas directas."
           </p>
           <div class="testimonial-author">
@@ -503,7 +805,8 @@
           <div class="faq-answer">
             <div class="faq-answer-content">
               PureteGO es un servicio completo que mejora la visibilidad en línea de tu negocio a través de SEO para
-              Marketing Local, Presencia Web y Google My Business. Ayuda a aumentar el tráfico de tu sitio web, generar
+              Marketing Local, Presencia Web y Google My Business. Ayuda a aumentar el tráfico de tu sitio web,
+              generar
               más clientes potenciales y mejorar el compromiso de los clientes.
             </div>
           </div>
@@ -518,7 +821,8 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Optimizamos tu perfil de negocio para aparecer en las primeras posiciones de Google Search y Google Maps,
+              Optimizamos tu perfil de negocio para aparecer en las primeras posiciones de Google Search y Google
+              Maps,
               dirigiendo tráfico de alta calidad directamente a tu puerta. Esto incluye gestión de reseñas,
               publicaciones y actualización constante de información.
             </div>
@@ -549,8 +853,10 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Convertimos su perfil de Google en una poderosa herramienta de captación de clientes, gestionando reseñas,
-              publicaciones y asegurando que su información esté siempre actualizada y sea atractiva para los buscadores
+              Convertimos su perfil de Google en una poderosa herramienta de captación de clientes, gestionando
+              reseñas,
+              publicaciones y asegurando que su información esté siempre actualizada y sea atractiva para los
+              buscadores
               locales.
             </div>
           </div>
@@ -584,7 +890,8 @@
               En PureteGO ofrecemos soluciones inteligentes para todo tipo de empresa. Desde solo Gs. 3.500.000, te
               brindamos una presencia digital estratégica: optimización SEO en Google y Google Maps, planificación de
               palabras clave y sitio institucional. El hospedaje tiene un costo mensual de Gs. 75.000. ¡Aumentá tu
-              visibilidad online y hacé que te encuentren primero! Y lo mejor de todo: puedes invertir en hasta 3 cuotas
+              visibilidad online y hacé que te encuentren primero! Y lo mejor de todo: puedes invertir en hasta 3
+              cuotas
               sin intereses.
             </div>
           </div>
@@ -607,18 +914,24 @@
           <div class="blog-card-content">
             <span class="blog-card-meta">SEO Local • 5 min lectura</span>
             <h3>Cómo aparecer en las primeras posiciones de Google</h3>
-            <p>Descubre las estrategias más efectivas para posicionar tu negocio local en los resultados de búsqueda de
+            <p>Descubre las estrategias más efectivas para posicionar tu negocio local en los resultados de búsqueda
+              de
               Google.</p>
           </div>
         </article>
 
         <article class="blog-card fade-in">
-          <img src="img/blog/google-mi-negocio.jpg" alt="Google Mi Negocio Paraguay" class="blog-card-image"
-            loading="lazy">
+          <a href="blog/articulos/guia-google-my-business-2026.html">
+            <img src="img/blog/google-my-business-2026.png" alt="Google My Business 2026" class="blog-card-image"
+              loading="lazy">
+          </a>
           <div class="blog-card-content">
-            <span class="blog-card-meta">Google Mi Negocio • 8 min lectura</span>
-            <h3>Guía completa: Google Mi Negocio para empresas locales</h3>
-            <p>Todo lo que necesitas saber para optimizar tu perfil empresarial en Google y atraer más clientes.</p>
+            <span class="blog-card-meta">Google Mi Negocio • 10 min lectura</span>
+            <h3><a href="blog/articulos/guia-google-my-business-2026.html">Guía Completa Google My Business 2026</a>
+            </h3>
+            <p>Aprende a optimizar tu Perfil de Empresa en Google con estrategias de IA, tours virtuales 360° y
+              gestión
+              de reseñas.</p>
           </div>
         </article>
 
@@ -642,7 +955,8 @@
   <section id="contacto" class="cta-section">
     <div class="container">
       <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
-      <p>Solicita una consultoría gratuita y descubre cómo podemos ayudarte a crecer con el poder del marketing digital
+      <p>Solicita una consultoría gratuita y descubre cómo podemos ayudarte a crecer con el poder del marketing
+        digital
         y el SEO local.</p>
       <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20gustaría%20solicitar%20una%20consultoría%20gratuita%20para%20mi%20negocio."
         class="btn btn-lg" target="_blank" rel="noopener">
@@ -660,11 +974,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="img/logo.png" alt="PureteGO" width="180" height="40">
+          <a href="/">
+            <img src="img/logo.png" alt="PureteGO - Marketing Digital Paraguay" width="180" height="40">
+          </a>
           <p>Somos una agencia de marketing digital multinacional con presencia en Paraguay y Brasil. Especialistas en
             GeoMarketing, SEO Local y soluciones digitales para negocios locales.</p>
         </div>
-
         <div>
           <h4 class="footer-title">Servicios</h4>
           <ul class="footer-links">
@@ -672,10 +987,9 @@
             <li><a href="servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
             <li><a href="servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
             <li><a href="servicios/hospedaje-web.html">Hospedaje Web</a></li>
-            <li><a href="servicios/marketing-digital.html">Marketing Digital</a></li>
+            <li><a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="footer-title">Empresa</h4>
           <ul class="footer-links">
@@ -684,19 +998,12 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="footer-title">Contacto</h4>
           <ul class="footer-links">
-            <li>
-              <a href="https://wa.me/595983500802" target="_blank" rel="noopener">
-                📱 +595 983 500 802
-              </a>
-            </li>
-            <li>
-              <a href="mailto:contacto@puretego.online">
-                ✉️ contacto@puretego.online
-              </a>
+            <a href="mailto:contacto@puretego.online">
+              ✉️ contacto@puretego.online
+            </a>
             </li>
             <li>📍 Nepal casi Valencia, Barrio San Luis<br>San Lorenzo, Paraguay</li>
             <li>🌎 Paraguay & Brasil</li>
@@ -748,6 +1055,14 @@
   </a>
 
   <!-- Scripts -->
+  <!-- Scroll Up Button -->
+  <button id="scroll-up" class="scroll-up" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
   <script src="js/main.js"></script>
   <script>
     // Initialize counters when visible

@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q84QCMPH42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q84QCMPH42');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Planes de Hosting Web en Paraguay | PureteGO</title>
+    <meta name="description"
+        content="Hosting profesional para tu sitio web en Paraguay. cPanel en español, cuentas de email ilimitadas, SSL gratis y soporte 24/7. Desde Gs. 364.800/año.">
+    <meta name="keywords"
+        content="hosting Paraguay, web hosting, hospedaje web, cPanel, email corporativo, SSL gratis, hosting barato Paraguay">
+    <meta name="author" content="PureteGO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.puretego.online/servicios/planes-hosting.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.puretego.online/servicios/planes-hosting.html">
+    <meta property="og:title" content="Planes de Hosting Web en Paraguay | PureteGO">
+    <meta property="og:description"
+        content="Hosting profesional con cPanel, email ilimitado y SSL gratis. Desde Gs. 364.800/año.">
+    <meta property="og:locale" content="es_PY">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
+    <!-- Google Fonts - Optimized Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap">
+    </noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Hosting Page Specific Styles */
+        .hosting-hero {
+            background: var(--gradient-hero);
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .hosting-hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--space-4);
+        }
+
+        .hosting-hero p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--text-xl);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .plans-section {
+            padding: var(--space-16) 0;
+        }
+
+        .plans-category {
+            margin-bottom: var(--space-16);
+        }
+
+        .plans-category-title {
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+
+        .plans-category-title h2 {
+            margin-bottom: var(--space-2);
+        }
+
+        .plans-category-title p {
+            color: rgba(12, 12, 13, 0.7);
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-4);
+        }
+
+        @media (max-width: 1400px) {
+            .plans-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .plans-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .plan-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-5);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .plan-card.featured {
+            border: 2px solid var(--color-primary);
+            position: relative;
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: var(--font-semibold);
+        }
+
+        .plan-header {
+            text-align: center;
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--space-4);
+        }
+
+        .plan-name {
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-1);
+        }
+
+        .plan-discount {
+            background: var(--color-accent);
+            color: white;
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-size: 0.65rem;
+            font-weight: var(--font-semibold);
+            display: inline-block;
+            margin-bottom: var(--space-1);
+        }
+
+        .plan-price {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-extrabold);
+            color: var(--color-primary);
+        }
+
+        .plan-price span {
+            font-size: var(--text-sm);
+            font-weight: var(--font-normal);
+            color: rgba(12, 12, 13, 0.6);
+        }
+
+        .plan-period {
+            font-size: var(--text-xs);
+            color: rgba(12, 12, 13, 0.6);
+        }
+
+        .plan-features {
+            flex-grow: 1;
+            margin-bottom: var(--space-6);
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-3);
+            font-size: var(--text-sm);
+        }
+
+        .plan-features li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--color-success);
+            flex-shrink: 0;
+        }
+
+        .plan-cta {
+            text-align: center;
+        }
+
+        .plan-cta .btn {
+            width: 100%;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--gradient-dark);
+            padding: var(--space-16) 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: var(--space-6);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--space-4);
+            background: rgba(1, 167, 238, 0.2);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--color-primary);
+        }
+
+        .feature-item h3 {
+            color: var(--color-white);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-2);
+        }
+
+        .feature-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--text-sm);
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: var(--space-16) 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--space-8);
+            overflow-x: auto;
+            display: block;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--space-4);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th {
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: var(--font-semibold);
+        }
+
+        .comparison-table th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: var(--font-medium);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(1, 167, 238, 0.05);
+        }
+
+        .check-icon {
+            color: var(--color-success);
+        }
+
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: var(--text-sm);
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--space-2);
+            }
+        }
+
+        /* Billing Toggle */
+        .billing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .billing-label {
+            font-weight: 600;
+            color: rgba(12, 12, 13, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .billing-label.active {
+            color: var(--color-secondary);
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 32px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--color-primary);
+            transition: 0.4s;
+            border-radius: 32px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 24px;
+            width: 24px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-switch input:checked+.toggle-slider:before {
+            transform: translateX(28px);
+        }
+
+        /* cPanel Control Section */
+        .cpanel-control-section {
+            padding: var(--space-20) 0;
+            background: var(--color-white);
+            text-align: center;
+        }
+
+        .cpanel-tabs {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(1, 167, 238, 0.03);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-4);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-buttons {
+            display: flex;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4px;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-12);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tab-btn {
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            background: transparent;
+            font-weight: 600;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--color-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .tab-content {
+            display: none;
+            text-align: left;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: flex;
+            align-items: center;
+            gap: var(--space-12);
+        }
+
+        .tab-text {
+            flex: 1;
+        }
+
+        .tab-image {
+            flex: 1;
+        }
+
+        .tab-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 992px) {
+            .tab-content.active {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tab-content.active ul {
+                text-align: left;
+                display: inline-block;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Centering Corporate Cards */
+        .plans-category .plans-grid {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo.png" alt="PureteGO - Marketing Digital Paraguay" width="180" height="40">
+                </a>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Pacotes Digitales</div>
+                                <a href="../index.html#planes">Start2GO - Gs. 1.500.000</a>
+                                <a href="../index.html#planes">Biz2GO - Gs. 2.900.000</a>
+                                <a href="../index.html#planes">Pro2GO - Gs. 3.900.000</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Hosting Web</div>
+                                <a href="planes-hosting.html">Planes de Hosting</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Otros Servicios</div>
+                                <a href="geomarketing.html">GeoMarketing</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Google</a>
+                                <a href="creacion-sitios.html">Creación de Sitios Web</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                    <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20un%20plan%20de%20hosting."
+                        class="btn btn-primary" target="_blank" rel="noopener"
+                        title="Gratis para empresas de Asunción y Gran Asunción">
+                        Consultoría Gratis
+                    </a>
+                    <div class="consultancy-note"
+                        style="position: absolute; top: 100%; right: 0; width: 100%; white-space: nowrap; font-size: 0.65rem; color: rgba(255,255,255,0.6); text-align: right; padding-right: 5px; pointer-events: none;">
+                        *Solo para empresas de Gran Asunción
+                    </div>
+                    <button class="menu-toggle" aria-label="Menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hosting-hero">
+        <div class="container">
+            <h1>Planes de <span class="text-gradient">Hosting Web</span></h1>
+            <p>Hospedaje profesional con cPanel, cuentas de email ilimitadas, SSL gratis y soporte técnico 24/7.
+                Potenciado
+                por MaxDominios.</p>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section">
+        <div class="container">
+
+            <!-- Planes Básicos -->
+            <div class="plans-category">
+                <div class="plans-category-title">
+                    <h2>Planes de Web Hosting</h2>
+                    <p>Ideales para sitios web, blogs y pequeños negocios</p>
+
+                    <!-- Billing Toggle -->
+                    <div class="billing-toggle" style="margin-top: 1.5rem;">
+                        <span class="billing-label" id="label-mensual">Mensual</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="billing-toggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="billing-label active" id="label-anual">Anual <span
+                                style="background: var(--color-accent); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 4px;">20%
+                                OFF</span></span>
+                    </div>
+                </div>
+
+                <!-- Promo Banner -->
+                <div
+                    style="background: linear-gradient(135deg, #00c896, #00a67d); color: white; padding: 1rem 2rem; border-radius: 12px; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 200, 150, 0.3);">
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <span style="font-size: 1.5rem;">🎁</span>
+                        <div>
+                            <strong style="font-size: 1.1rem;">¡30 DÍAS GRATIS!</strong>
+                            <span style="margin-left: 0.5rem;">Usa el cupón</span>
+                            <code
+                                style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 6px; font-weight: bold; margin-left: 0.5rem; font-size: 1rem;">PureteGO</code>
+                            <span style="margin-left: 0.5rem;">al contratar</span>
+                        </div>
+                        <span style="font-size: 1.5rem;">🎁</span>
+                    </div>
+                </div>
+
+                <div class="plans-grid">
+                    <!-- Plan Inicial -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Inicial</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                500 MB</div>
+                            <div class="plan-price">364.800 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Webmail / POP3 / IMAP
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Inicial%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Medio -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Medio</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                1 GB</div>
+                            <div class="plan-price">633.600 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Webmail / POP3 / IMAP
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Medio%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Host2GO - Popular -->
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Popular</div>
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Host2GO</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                1.5 GB</div>
+                            <div class="plan-price">739.200 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Webmail / POP3 / IMAP
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Host2GO%20de%20Hosting"
+                                class="btn btn-primary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Avanzado -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Avanzado</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                2 GB</div>
+                            <div class="plan-price">950.400 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Webmail / POP3 / IMAP
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Avanzado%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Master -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Master</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                3 GB</div>
+                            <div class="plan-price">1.267.200 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Webmail / POP3 / IMAP
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Master%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cPanel Control Section -->
+            <section class="cpanel-control-section">
+                <div class="container">
+                    <h2 style="margin-bottom: var(--space-12);">Ten el control total de tu Hosting con <span
+                            class="text-gradient">cPanel full español</span></h2>
+
+                    <div class="cpanel-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" onclick="openTab(event, 'management')">Gerenciamiento
+                                Fácil</button>
+                            <button class="tab-btn" onclick="openTab(event, 'security')">Seguridad Avanzada</button>
+                        </div>
+
+                        <!-- Gerenciamiento Tab -->
+                        <div id="management" class="tab-content active">
+                            <div class="tab-text">
+                                <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Gerencia tu Hosting con cPanel
+                                </h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> El panel de hosting más completo y utilizado del mundo
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Gestioná los recursos de tu sitio de forma simple e intuitiva
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Crea y administra fácilmente tus correos corporativos
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Agrega y gestiona tus subdominios
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Contá siempre con un panel actualizado para mejorar funciones y
+                                        seguridad
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <img src="../img/cpanel-management.png" alt="cPanel Dashboard Management"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Seguridad Tab -->
+                        <div id="security" class="tab-content">
+                            <div class="tab-text">
+                                <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Seguridad de alto nivel</h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Certificados SSL gratuitos y automáticos para brindar una conexión
+                                        segura
+                                        a tus visitantes
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Tu sitio permanece seguro y estable incluso durante ataques con alto
+                                        tráfico
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Detección y bloqueo automático de tráfico malicioso, protegiendo los
+                                        datos de los usuarios
+                                    </li>
+                                    <li style="display: flex; gap: 10px; margin-bottom: 12px; font-size: 1.1rem;">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke="var(--color-success)"
+                                            stroke-width="3" style="width:24px; height:24px;">
+                                            <path d="M5 13l4 4L19 7" />
+                                        </svg> Soluciones automatizadas para combatir malware, vulnerabilidades y
+                                        actividades sospechosas
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <img src="../img/cpanel-security.png" alt="SSL Security Certification" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Planes Corporativos -->
+            <div class="plans-category">
+                <div class="plans-category-title">
+                    <h2>Más Espacio y Rendimiento</h2>
+                    <p>Para sitios con mayor tráfico y necesidades empresariales</p>
+                </div>
+
+                <div class="plans-grid">
+                    <!-- Plan Plus -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Plus</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                5 GB</div>
+                            <div class="plan-price">1.478.400 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Plus%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Gigante -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Gigante</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                10 GB</div>
+                            <div class="plan-price">2.112.000 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Gigante%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Corporativo -->
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Empresas</div>
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Corporativo</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                15 GB</div>
+                            <div class="plan-price">2.784.000 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Corporativo%20de%20Hosting"
+                                class="btn btn-primary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Premium -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-discount">Anual 20% OFF</div>
+                            <h3 class="plan-name">Plan Premium</h3>
+                            <div class="plan-storage"
+                                style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin: 0.5rem 0;">
+                                20 GB</div>
+                            <div class="plan-price">3.360.000 <span>Gs</span></div>
+                            <div class="plan-period">/año</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Transferencia Ilimitada
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cuentas de E-mail Ilimitadas
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                cPanel Full en Español
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                PHP y MySQL
+                            </li>
+                            <li>
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                SSL Gratis
+                            </li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://wa.me/595983500802?text=Hola,%20me%20interesa%20el%20Plan%20Premium%20de%20Hosting"
+                                class="btn btn-secondary" target="_blank">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">¿Por qué elegir nuestro <span class="text-gradient">Hosting</span>?</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3>SSL Gratis</h3>
+                    <p>Certificado SSL automático para conexión segura en tu sitio</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3>Email Ilimitado</h3>
+                    <p>Crea todas las cuentas de correo corporativo que necesites</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                        </svg>
+                    </div>
+                    <h3>MySQL Ilimitado</h3>
+                    <p>Sin límites en bases de datos para tus aplicaciones</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Asistencia técnica disponible cuando la necesites</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3>99.9% Uptime</h3>
+                    <p>Garantía de disponibilidad para tu sitio web</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <h3>Backups</h3>
+                    <p>Respaldos automáticos de tu sitio y bases de datos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Specifications Section -->
+    <section class="specifications-section" style="padding: var(--space-16) 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Características y <span class="text-gradient">Recursos</span> Incluidos</h2>
+                <p>Todos nuestros planes incluyen estas características premium</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                <!-- Soporte y Garantía -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        Soporte y Garantía
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Soporte 24/7
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Backups automáticos
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Sin contrato de permanencia
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> 99.9% Uptime Garantizado
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Setup ágil y gratuito
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> 100% Soporte WordPress, Joomla,
+                            Moodle
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dominios y FTP -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                        Dominio y FTP
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Dominios Parking ilimitados
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Sub Dominios ilimitados
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Cuentas FTP ilimitadas
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> FTP Anónimo disponible
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- E-mail -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Correo Electrónico
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Cuentas de E-mail ilimitadas
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> POP3 y Web Mail
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> E-mail Alias y Auto Respuestas
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Redireccionamiento de E-mails
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Spam Assassin (antispam)
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> IMAP y SMTP
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Base de Datos -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                        </svg>
+                        Base de Datos
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Bases de Datos MySQL ilimitadas
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> PHP (última versión)
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> phpMyAdmin
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> CGI y Perl
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Cron Jobs (tareas programadas)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Panel de Control -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Panel de Control (cPanel)
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> cPanel Multi-idiomas (Español)
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Estadísticas de visitas
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Protección contra Hotlinking
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Gerenciador de archivos Web
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Directorios protegidos por
+                            contraseña
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Seguridad -->
+                <div
+                    style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3
+                        style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        Seguridad Avanzada
+                    </h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Certificado SSL gratuito
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Protección DDoS
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> IP Deny Manager
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Detección de malware
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-success);">✓</span> Firewall de aplicaciones web
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Necesitas ayuda para elegir?</h2>
+            <p>Nuestro equipo te ayudará a seleccionar el plan ideal para tu negocio.</p>
+            <a href="https://wa.me/595983500802?text=Hola,%20necesito%20ayuda%20para%20elegir%20un%20plan%20de%20hosting."
+                class="btn btn-lg" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Consultar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../img/logo.png" alt="PureteGO" width="180" height="40">
+                    <p>Somos una agencia de marketing digital multinacional con presencia en Paraguay y Brasil.
+                        Especialistas en
+                        GeoMarketing, SEO Local y soluciones digitales para negocios locales.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="/servicios/geomarketing.html">GeoMarketing</a></li>
+                        <li><a href="/servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
+                        <li><a href="/servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
+                        <li><a href="/servicios/hospedaje-web.html">Hospedaje Web</a></li>
+                        <li><a href="/servicios/marketing-digital.html">Gestión de Tráfico Pago</a></li>
+                        <li><a href="/servicios/planes-hosting.html">Planes de Hosting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://wa.me/595983500802" target="_blank" rel="noopener">
+                                📱 +595 983 500 802
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contacto@puretego.online">
+                        <li><a href="https://wa.me/595983500802" target="_blank">📱 +595 983 500 802</a></li>
+                        <li><a href="mailto:contacto@puretego.online">✉️ contacto@puretego.online</a></li>
+                        <li>📍 Nepal casi Valencia,<br>Barrio San Luis<br>San Lorenzo, Paraguay</li>
+                        <li>🌎 Paraguay & Brasil</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="google-badges" style="display: flex; gap: 1rem; align-items: center;">
+                    <img src="../img/google-partner.png" alt="Google Partner"
+                        style="height: 40px; width: auto; background: white; padding: 5px; border-radius: 4px;">
+                    <img src="../img/google-street-view-trusted.jpg" alt="Google Street View Trusted"
+                        style="height: 40px; width: auto; border-radius: 4px;">
+                </div>
+            </div>
+
+            <div class="footer-bottom"
+                style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <p>&copy; 2026 PureteGO. Todos los derechos reservados.</p>
+                <div id="daily-verse" style="font-size: 0.85rem; font-style: italic; color: rgba(255,255,255,0.6);">
+                </div>
+                <div class="social-links">
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505
+                    0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0
+                    2.122
+                    2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24
+                    12
+                    24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/595983500802?text=¡Hola!%20Necesito%20información%20sobre%20hosting." class="whatsapp-float"
+        target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script>
+        // Billing Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('billing-toggle');
+            const labelMensual = document.getElementById('label-mensual');
+            const labelAnual = document.getElementById('label-anual');
+
+            // Price data: [monthly, annual] for each plan
+            const prices = {
+                'Plan Inicial': { monthly: 38000, annual: 364800 },
+                'Plan Medio': { monthly: 66000, annual: 633600 },
+                'Host2GO': { monthly: 77000, annual: 739200 },
+                'Plan Avanzado': { monthly: 99000, annual: 950400 },
+                'Plan Master': { monthly: 132000, annual: 1267200 },
+                'Plan Plus': { monthly: 154000, annual: 1478400 },
+                'Plan Gigante': { monthly: 220000, annual: 2112000 },
+                'Plan Corporativo': { monthly: 290000, annual: 2784000 },
+                'Plan Premium': { monthly: 350000, annual: 3360000 }
+            };
+
+            function formatPrice(price) {
+                return price.toLocaleString('es-PY');
+            }
+
+            function updatePrices(isAnnual) {
+                const planCards = document.querySelectorAll('.plan-card');
+
+                planCards.forEach(card => {
+                    const planName = card.querySelector('.plan-name');
+                    const priceEl = card.querySelector('.plan-price');
+                    const periodEl = card.querySelector('.plan-period');
+                    const discountEl = card.querySelector('.plan-discount');
+
+                    if (planName && priceEl && prices[planName.textContent]) {
+                        const priceData = prices[planName.textContent];
+                        const price = isAnnual ? priceData.annual : priceData.monthly;
+
+                        priceEl.innerHTML = formatPrice(price) + ' <span>Gs</span>';
+                        periodEl.textContent = isAnnual ? '/año' : '/mes';
+
+                        if (discountEl) {
+                            discountEl.style.display = isAnnual ? 'block' : 'none';
+                        }
+                    }
+                });
+
+                // Update labels
+                if (isAnnual) {
+                    labelAnual.classList.add('active');
+                    labelMensual.classList.remove('active');
+                } else {
+                    labelMensual.classList.add('active');
+                    labelAnual.classList.remove('active');
+                }
+            }
+
+            if (toggle) {
+                toggle.addEventListener('change', function () {
+                    updatePrices(this.checked);
+                });
+            }
+        });
+
+        // Tab selection function
+        function openTab(evt, tabName) {
+            var i, tabContent, tabBtns;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+            tabBtns = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "flex";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script src="../js/main.js" defer></script>
+</body>
+
+</html>

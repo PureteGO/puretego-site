@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Marketing Digital Paraguay | Agencia de Publicidad Online</title>
+    <title>Gestión de Tráfico Pago | Google Ads, Meta Ads y TikTok Ads en Paraguay</title>
     <meta name="description"
-        content="Agencia de marketing digital en Paraguay. Estrategias de redes sociales, publicidad online, email marketing y más para hacer crecer tu negocio.">
+        content="Agencia especializada en gestión de tráfico pago en Paraguay. Google Ads, Meta Ads (Facebook e Instagram) y TikTok Ads. Maximiza tu ROI con campañas optimizadas.">
     <meta name="keywords"
-        content="marketing digital Paraguay, agencia publicidad, redes sociales, Facebook Ads, Instagram Ads, email marketing">
+        content="gestión tráfico pago Paraguay, Google Ads Paraguay, Meta Ads, Facebook Ads, Instagram Ads, TikTok Ads, agencia publicidad digital">
     <link rel="canonical" href="https://www.puretego.online/servicios/marketing-digital.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,160 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .platform-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .platform-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 2.5rem;
+        }
+
+        .platform-icon.google {
+            background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+        }
+
+        .platform-icon.meta {
+            background: linear-gradient(135deg, #0668E1, #1877F2);
+        }
+
+        .platform-icon.tiktok {
+            background: linear-gradient(135deg, #000, #69C9D0, #EE1D52);
+        }
+
+        .platform-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .platform-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .pricing-highlight {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .pricing-highlight .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+
+        .pricing-highlight .price span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .result-card .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+        }
+
+        .result-card .label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-item h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-item p {
+            color: var(--color-text-muted);
+            margin: 0;
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,12 +193,29 @@
                 <nav class="nav">
                     <ul class="nav-list">
                         <li><a href="/" class="nav-link">Inicio</a></li>
-                        <li><a href="/#servicios" class="nav-link">Servicios</a></li>
+                        <li class="nav-item">
+                            <a href="/#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Pacotes Digitales</div>
+                                <a href="/#precios">Start2GO - Gs. 1.500.000</a>
+                                <a href="/#precios">Biz2GO - Gs. 2.900.000</a>
+                                <a href="/#precios">Pro2GO - Gs. 3.900.000</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Hosting Web</div>
+                                <a href="/servicios/hospedaje-web.html">Planes de Hosting</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Otros Servicios</div>
+                                <a href="/servicios/geomarketing.html">GeoMarketing</a>
+                                <a href="/servicios/perfil-empresarial.html">Perfil Empresarial Google</a>
+                                <a href="/servicios/creacion-sitios.html">Creación de Sitios Web</a>
+                                <a href="/servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                            </div>
+                        </li>
                         <li><a href="/nosotros.html" class="nav-link">Nosotros</a></li>
                         <li><a href="/blog/" class="nav-link">Blog</a></li>
                         <li><a href="/#contacto" class="nav-link">Contacto</a></li>
                     </ul>
-                    <a href="https://wa.me/595983500802?text=¡Hola!%20Necesito%20marketing%20digital."
+                    <a href="https://wa.me/595983500802?text=¡Hola!%20Necesito%20gestión%20de%20tráfico%20pago."
                         class="btn btn-primary" target="_blank">Consultoría Gratis</a>
                     <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
                 </nav>
@@ -53,144 +224,283 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero" style="min-height: 70vh;">
+    <section class="hero" style="min-height: 80vh;">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1><span class="highlight">Marketing Digital</span> que Genera Resultados</h1>
+                    <h1><span class="highlight">Gestión de Tráfico Pago</span> para Empresas en Paraguay</h1>
                     <p class="hero-subtitle">
-                        Estrategias completas de marketing digital para aumentar tu visibilidad, atraer clientes y hacer
-                        crecer tu negocio en el mundo online.
+                        Maximiza tu inversión publicitaria con campañas profesionales en <strong>Google Ads</strong>,
+                        <strong>Meta Ads</strong> (Facebook e Instagram) y <strong>TikTok Ads</strong>.
+                        ROI medible y resultados reales desde el primer mes.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20una%20estrategia%20de%20marketing%20digital."
+                    <div class="hero-buttons" style="gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20información%20sobre%20gestión%20de%20tráfico%20pago."
                             class="btn btn-whatsapp btn-lg" target="_blank">
-                            Solicitar Consultoría
+                            Solicitar Consultoría Gratis
+                        </a>
+                        <a href="#plataformas" class="btn btn-outline btn-lg">
+                            Ver Plataformas
                         </a>
                     </div>
                 </div>
                 <div class="hero-image slide-in-right">
-                    <img src="../img/marketing-banner.png" alt="Marketing Digital" width="450" height="400">
+                    <img src="../img/google-ads-hero.png" alt="Gestión de Tráfico Pago - Google Ads, Meta Ads, TikTok"
+                        width="450" height="400">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Nuestros Servicios de <span class="text-gradient">Marketing</span></h2>
-                <p>Soluciones integrales para tu presencia digital</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                            <line x1="6" y1="1" x2="6" y2="4"></line>
-                            <line x1="10" y1="1" x2="10" y2="4"></line>
-                            <line x1="14" y1="1" x2="14" y2="4"></line>
-                        </svg>
-                    </div>
-                    <h3>Redes Sociales</h3>
-                    <p>Gestión profesional de Facebook, Instagram, TikTok y LinkedIn para tu marca.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                    </div>
-                    <h3>Publicidad Online</h3>
-                    <p>Campañas en Google Ads, Facebook Ads e Instagram Ads optimizadas para conversión.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Email Marketing</h3>
-                    <p>Campañas de email que convierten y mantienen a tus clientes conectados.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
-                    </div>
-                    <h3>Marketing de Contenidos</h3>
-                    <p>Creación de contenido relevante que atrae y educa a tu audiencia.</p>
-                </div>
-
-                <div class="service-card fade-in" id="analisis">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3>Análisis y Reportes</h3>
-                    <p>Métricas claras y reportes detallados para medir el ROI de tu inversión.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                            <line x1="1" y1="10" x2="23" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h3>Branding Digital</h3>
-                    <p>Construcción de identidad de marca consistente en todos los canales digitales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Por qué elegirnos -->
+    <!-- Estadísticas -->
     <section class="section section-dark">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>¿Por qué <span class="text-gradient">Elegirnos</span>?</h2>
+                <h2 style="color: white;">¿Por qué invertir en <span class="text-gradient">Tráfico Pago</span>?</h2>
+                <p style="color: rgba(255,255,255,0.8);">Los números hablan por sí solos</p>
             </div>
 
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in" style="color: white;">
-                    <div class="benefit-number">📊</div>
-                    <div class="benefit-label" style="color: rgba(255,255,255,0.8);">Estrategias Basadas en Datos</div>
+            <div class="results-grid">
+                <div class="result-card fade-in">
+                    <div class="number">97%</div>
+                    <div class="label">de los consumidores buscan negocios locales online</div>
                 </div>
-                <div class="benefit-card fade-in" style="color: white;">
-                    <div class="benefit-number">🎯</div>
-                    <div class="benefit-label" style="color: rgba(255,255,255,0.8);">Enfoque en Resultados</div>
+                <div class="result-card fade-in">
+                    <div class="number">4.5x</div>
+                    <div class="label">ROI promedio en campañas de Google Ads bien gestionadas</div>
                 </div>
-                <div class="benefit-card fade-in" style="color: white;">
-                    <div class="benefit-number">💬</div>
-                    <div class="benefit-label" style="color: rgba(255,255,255,0.8);">Comunicación Transparente</div>
+                <div class="result-card fade-in">
+                    <div class="number">65%</div>
+                    <div class="label">de las personas hacen clic en anuncios al buscar comprar</div>
                 </div>
-                <div class="benefit-card fade-in" style="color: white;">
-                    <div class="benefit-number">🚀</div>
-                    <div class="benefit-label" style="color: rgba(255,255,255,0.8);">Equipo Especializado</div>
+                <div class="result-card fade-in">
+                    <div class="number">24/7</div>
+                    <div class="label">tus anuncios trabajan para ti todo el día</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas -->
+    <section class="section" id="plataformas">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Plataformas de <span class="text-gradient">Publicidad Digital</span></h2>
+                <p>Gestionamos tus campañas en las principales plataformas publicitarias</p>
+            </div>
+
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Google Ads -->
+                <div class="platform-card fade-in">
+                    <div class="platform-icon google">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a2233" />
+                        </svg>
+                    </div>
+                    <h3>Google Ads</h3>
+                    <p>Campañas de Búsqueda, Display, YouTube y Performance Max. Aparece cuando tus clientes te buscan
+                        activamente.</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: var(--color-text-muted);">
+                        <li>✓ Campañas de búsqueda (Search)</li>
+                        <li>✓ Red de Display</li>
+                        <li>✓ YouTube Ads</li>
+                        <li>✓ Performance Max con IA</li>
+                        <li>✓ Remarketing inteligente</li>
+                    </ul>
+                </div>
+
+                <!-- Meta Ads -->
+                <div class="platform-card fade-in">
+                    <div class="platform-icon meta">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </div>
+                    <h3>Meta Ads</h3>
+                    <p>Publicidad en Facebook e Instagram con segmentación avanzada por intereses, comportamientos y
+                        audiencias similares.</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: var(--color-text-muted);">
+                        <li>✓ Facebook Feed e Stories</li>
+                        <li>✓ Instagram Feed, Stories y Reels</li>
+                        <li>✓ Messenger Ads</li>
+                        <li>✓ Audiencias Lookalike</li>
+                        <li>✓ Retargeting dinámico</li>
+                    </ul>
+                </div>
+
+                <!-- TikTok Ads -->
+                <div class="platform-card fade-in">
+                    <div class="platform-icon tiktok">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                        </svg>
+                    </div>
+                    <h3>TikTok Ads</h3>
+                    <p>Alcanza a la generación más activa con contenido creativo y viral. Ideal para marcas que quieren
+                        innovar.</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: var(--color-text-muted);">
+                        <li>✓ In-Feed Ads</li>
+                        <li>✓ TopView Ads</li>
+                        <li>✓ Branded Effects</li>
+                        <li>✓ Spark Ads</li>
+                        <li>✓ Audiencias personalizadas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precio -->
+    <section class="section" style="background: var(--color-background);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Inversión en <span class="text-gradient">Tráfico Pago</span></h2>
+                <p>Planes flexibles adaptados a tu negocio</p>
+            </div>
+
+            <div class="pricing-highlight fade-in">
+                <h3 style="margin: 0; font-weight: 400; opacity: 0.9;">Gestión de campañas desde</h3>
+                <div class="price">550.000 <span>Gs/mes</span></div>
+                <p style="margin: 0; opacity: 0.9;">+ inversión publicitaria (pagada directamente a la plataforma)</p>
+                <p style="margin-top: 1rem; font-weight: 600;">Contrato mínimo: 120 días (4 meses)</p>
+                <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20contratar%20gestión%20de%20tráfico%20pago."
+                    class="btn btn-lg" style="margin-top: 1.5rem; background: white; color: var(--color-primary);"
+                    target="_blank">
+                    Comenzar Ahora
+                </a>
+            </div>
+
+            <div style="max-width: 800px; margin: 2rem auto 0;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">¿Qué incluye la gestión?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Configuración inicial de cuentas
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Investigación de palabras clave
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Creación de anuncios y copies
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Segmentación de audiencias
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Optimización continua
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> A/B Testing de anuncios
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Reportes mensuales detallados
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--color-accent);">✓</span> Reuniones de seguimiento
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nuestro <span class="text-gradient">Proceso</span></h2>
+                <p>Metodología probada para maximizar tu inversión</p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Análisis y Estrategia</h4>
+                        <p>Estudiamos tu negocio, competencia y objetivos para definir la mejor estrategia publicitaria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Configuración de Campañas</h4>
+                        <p>Creamos las cuentas, configuramos el tracking, definimos audiencias y creamos los anuncios.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Lanzamiento y Monitoreo</h4>
+                        <p>Lanzamos las campañas y monitoreamos el rendimiento en tiempo real para hacer ajustes
+                            rápidos.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Optimización Continua</h4>
+                        <p>Mejoramos constantemente las campañas basándonos en datos para maximizar tu ROI.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Reportes y Escalado</h4>
+                        <p>Entregamos reportes claros y planificamos el crecimiento de tus campañas exitosas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background: var(--color-background);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Preguntas <span class="text-gradient">Frecuentes</span></h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item fade-in">
+                    <h4>❓ ¿Cuánto debo invertir en publicidad?</h4>
+                    <p>Recomendamos una inversión mínima de 500.000 Gs/mes en publicidad para ver resultados
+                        significativos. La inversión óptima depende de tu industria, competencia y objetivos. En la
+                        consultoría gratuita te ayudamos a definir el presupuesto ideal.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4>❓ ¿Por qué un contrato mínimo de 120 días?</h4>
+                    <p>Las plataformas publicitarias necesitan tiempo para optimizarse con IA. Los primeros 30-60 días
+                        son de aprendizaje, luego las campañas mejoran significativamente. Con 4 meses garantizamos
+                        resultados reales y medibles.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4>❓ ¿Qué plataforma es mejor para mi negocio?</h4>
+                    <p>Depende de tu tipo de negocio. Google Ads es ideal para búsquedas activas (servicios, productos).
+                        Meta Ads funciona muy bien para awareness y remarketing. TikTok es excelente para marcas que
+                        buscan alcanzar audiencias jóvenes. Podemos combinar plataformas.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4>❓ ¿Cómo miden los resultados?</h4>
+                    <p>Configuramos tracking completo (Google Analytics 4, píxeles de conversión) para medir: clics,
+                        leads, llamadas, ventas y ROI. Recibirás reportes mensuales claros con métricas clave y
+                        recomendaciones.</p>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <h4>❓ ¿Puedo ver mis campañas?</h4>
+                    <p>Absolutamente. Tendrás acceso completo a tus cuentas publicitarias. La transparencia es
+                        fundamental en nuestra gestión.</p>
                 </div>
             </div>
         </div>
@@ -199,11 +509,11 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para hacer crecer tu negocio online?</h2>
-            <p>Solicita una consultoría gratuita y descubre cómo podemos ayudarte.</p>
-            <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20una%20consultoría%20de%20marketing%20digital."
+            <h2>¿Listo para multiplicar tus ventas con tráfico pago?</h2>
+            <p>Solicita una consultoría gratuita y recibe un diagnóstico de tu situación actual.</p>
+            <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20una%20consultoría%20de%20tráfico%20pago%20para%20mi%20negocio."
                 class="btn btn-lg" target="_blank">
-                Solicitar Consultoría Gratis
+                Agendar Consultoría Gratis
             </a>
         </div>
     </section>
@@ -214,15 +524,17 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="../img/logo.png" alt="PureteGO" width="180" height="40">
-                    <p>Agencia de marketing digital en Paraguay.</p>
+                    <p>Agencia de marketing digital especializada en tráfico pago en Paraguay.</p>
                 </div>
                 <div>
                     <h4 class="footer-title">Servicios</h4>
                     <ul class="footer-links">
-                        <li><a href="geomarketing.html">GeoMarketing</a></li>
-                        <li><a href="perfil-empresarial.html">Perfil Empresarial Google</a></li>
-                        <li><a href="creacion-sitios.html">Creación de Sitios Web</a></li>
-                        <li><a href="hospedaje-web.html">Hospedaje Web</a></li>
+                        <li><a href="/servicios/geomarketing.html">GeoMarketing</a></li>
+                        <li><a href="/servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
+                        <li><a href="/servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
+                        <li><a href="/servicios/hospedaje-web.html">Hospedaje Web</a></li>
+                        <li><a href="/servicios/marketing-digital.html">Gestión de Tráfico Pago</a></li>
+                        <li><a href="/servicios/hospedaje-web.html">Planes de Hosting</a></li>
                     </ul>
                 </div>
                 <div>
@@ -239,7 +551,8 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/595983500802" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/595983500802?text=¡Hola!%20Necesito%20información%20sobre%20gestión%20de%20tráfico%20pago."
+        class="whatsapp-float" target="_blank" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
