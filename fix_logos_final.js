@@ -78,6 +78,8 @@ if (uass) finalOrder.push(uass);
 
 finalOrder = finalOrder.concat(generalDefaults);
 
+console.log(`Total Unique Logos: ${finalOrder.length}`);
+
 // 5. Generate HTML (3 Loops: Original + Copy 1 + Copy 2)
 let html = '          <div class="ticker-track">\n';
 const generateItem = (filename) => {
