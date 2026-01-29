@@ -58,6 +58,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/strategy.css">
 
   <!-- Schema.org LocalBusiness (Expanded) -->
   <script type="application/ld+json">
@@ -157,34 +158,23 @@
             <li class="nav-item">
               <a href="#servicios" class="nav-link">Servicios ▾</a>
               <div class="nav-dropdown">
-                <div class="nav-dropdown-title">Pacotes Digitales</div>
-                <a href="#planes">Start2GO - Gs. 1.500.000</a>
-                <a href="#planes">Biz2GO - Gs. 2.900.000</a>
-                <a href="#planes">Pro2GO - Gs. 3.900.000</a>
-                <div class="nav-dropdown-divider"></div>
-                <div class="nav-dropdown-title">Hosting Web</div>
-                <a href="servicios/hospedaje-web.html">Hospedaje Web</a>
-                <div class="nav-dropdown-divider"></div>
-                <div class="nav-dropdown-title">Otros Servicios</div>
-                <a href="servicios/geomarketing.html">GeoMarketing</a>
-                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Google</a>
-                <a href="servicios/creacion-sitios.html">Creación de Sitios Web</a>
+                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                <a href="servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
                 <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                <a href="servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                <div class="nav-dropdown-divider"></div>
+                <div class="nav-dropdown-title">Infraestructura</div>
+                <a href="servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
               </div>
             </li>
             <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
             <li><a href="blog/index.html" class="nav-link">Blog</a></li>
             <li><a href="#contacto" class="nav-link">Contacto</a></li>
           </ul>
-          <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20gustaría%20obtener%20una%20consultoría%20gratuita."
-            class="btn btn-primary" target="_blank" rel="noopener"
-            title="Gratis para empresas de Asunción y Gran Asunción (Lambaré, San Lorenzo, Luque, etc.)">
+          <button id="btnConsultoria" class="btn btn-primary">
             Consultoría Gratis
-          </a>
-          <div class="consultancy-note"
-            style="position: absolute; top: 100%; right: 0; width: 100%; white-space: nowrap; font-size: 0.65rem; color: rgba(255,255,255,0.6); text-align: right; padding-right: 5px; pointer-events: none;">
-            *Solo para empresas de Gran Asunción
-          </div>
+          </button>
           <button class="menu-toggle" aria-label="Menú">
             <span></span>
             <span></span>
@@ -195,526 +185,189 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Premium Slideshow -->
   <section class="hero">
+    <div class="hero-bg-container">
+      <div class="hero-slide active" style="background-image: url('img/hero/tech-bg.png');"></div>
+      <div class="hero-slide" style="background-image: url('img/hero/growth-bg.png');"></div>
+      <div class="hero-slide" style="background-image: url('img/hero/paraguay-bg.png');"></div>
+    </div>
+
     <div class="container">
       <div class="hero-content">
-        <div class="hero-text fade-in">
-          <h1>Tu Empresa en las <span class="highlight">Primeras Posiciones</span> de Google</h1>
-          <p class="hero-subtitle">
-            Somos especialistas en GeoMarketing y SEO Local. Ayudamos a negocios en Paraguay a vender más atrayendo
-            clientes de su zona con las herramientas de Google y Google Maps.
-          </p>
-          <div class="hero-buttons">
-            <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20posicionar%20mi%20empresa%20en%20Google."
-              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              Solicitar Consultoría Gratis
-            </a>
-            <a href="#servicios" class="btn btn-secondary btn-lg">
-              Ver Servicios
-            </a>
+        <div class="hero-text-rotator">
+          <!-- Slide 1 -->
+          <div class="hero-text-item active">
+            <h1 class="hero-title">DOMINA EL MERCADO LOCAL Y <span class="text-gradient">MULTIPLICA TUS VENTAS</span>
+            </h1>
+            <p class="hero-subtitle">Estrategistas especialistas en GeoMarketing y SEO para negocios en Paraguay.
+              Conectamos tu marca con clientes reales en el momento exacto.</p>
+          </div>
+          <!-- Slide 2 -->
+          <div class="hero-text-item">
+            <h1 class="hero-title">TU NEGOCIO EN LA <span class="text-gradient">CIMA DE GOOGLE MAPS</span></h1>
+            <p class="hero-subtitle">No solo te ponemos en el mapa, te ponemos frente a clientes listos para comprar.
+              Dominación local con estrategias de GeoMarketing de élite.</p>
+          </div>
+          <!-- Slide 3 -->
+          <div class="hero-text-item">
+            <h1 class="hero-title">ESTRATEGIAS QUE <span class="text-gradient">SÍ CONVIERTEN</span></h1>
+            <p class="hero-subtitle">Más que simples clics, generamos oportunidades reales de facturación auditadas. El
+              embudo que superó las 270.000 oportunidades de venta.</p>
           </div>
         </div>
-        <div class="hero-image slide-in-right">
-          <img src="img/hero-app-mockup.png" alt="GeoMarketing y SEO Local - PureteGO" width="500" height="500"
-            fetchpriority="high" decoding="async">
+
+        <div class="hero-cta fade-in">
+          <button id="btnHeroConsultoria" class="btn btn-primary btn-lg">Solicitar Consultoría Gratis</button>
+          <a href="#servicios" class="btn btn-secondary btn-lg">Explorar Soluciones</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Premium Services Section (Authority Focus) -->
   <section id="servicios" class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <h2>Nuestros <span class="text-gradient">Servicios</span></h2>
-        <p>Tu solución completa para el éxito online de tu negocio local</p>
+        <h2 class="section-title">Nuestras Unidades de <span class="text-gradient">Negocio</span></h2>
+        <p class="section-subtitle">Soluciones diseñadas para aumentar tu autoridad, visibilidade y facturación.</p>
       </div>
 
-      <div class="services-grid">
-        <!-- GeoMarketing -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
+      <div class="premium-grid">
+        <!-- Servicio 1: GeoMarketing -->
+        <div class="premium-card fade-in">
+          <div>
+            <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Dominación en Google Maps</h3>
+            <p>No solo te ponemos en el mapa, te ponemos en la cima. Capturamos clientes con alta intención de compra en
+              el momento exacto.</p>
+            <ul class="feature-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Optimización de Perfil de Negocio</li>
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Gestión de Reputación y Reseñas</li>
+              <li><i class="fas fa-check" style="color: var(--color-primary); margin-right: 10px;"></i> Estrategia de
+                SEO Local Avanzado</li>
+            </ul>
           </div>
-          <h3>GeoMarketing</h3>
-          <p>Atrae clientes de tu zona con estrategias de marketing geolocalizado y posicionamiento en Google Maps.
-          </p>
-          <a href="servicios/geomarketing.html" class="service-link">
-            Saber más <span>→</span>
+          <a href="servicios/geomarketing.html" class="btn btn-secondary btn-full"
+            style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            Ver Planes y Beneficios <i class="fas fa-arrow-right"></i>
           </a>
         </div>
 
-        <!-- Perfil Empresarial Google -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-              </path>
-            </svg>
+        <!-- Servicio 2: Sitios Web -->
+        <div class="premium-card fade-in">
+          <div>
+            <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+            <h3>Desarrollo Web de Alto Nivel</h3>
+            <p>Sitios web corporativos e institucionales que no solo informan, sino que convierten visitantes en
+              clientes fieles.</p>
+            <ul class="feature-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Diseño Premium & Responsivo</li>
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Velocidad de Carga Ultrarrápida</li>
+              <li><i class="fas fa-check" style="color: var(--color-primary); margin-right: 10px;"></i> Enfoque total en
+                Conversión (CRO)</li>
+            </ul>
           </div>
-          <h3>Perfil Empresarial Google</h3>
-          <p>Optimización completa de tu ficha de Google Mi Negocio para aparecer en las búsquedas locales.</p>
-          <a href="servicios/perfil-empresarial.html" class="service-link">
-            Saber más <span>→</span>
+          <a href="servicios/creacion-sitios.html" class="btn btn-secondary btn-full"
+            style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            Ver Planes y Beneficios <i class="fas fa-arrow-right"></i>
           </a>
         </div>
 
-        <!-- Creación de Sitios Web -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
+        <!-- Servicio 3: Tráfico Pago -->
+        <div class="premium-card fade-in">
+          <div>
+            <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+            <h3>Publicidad Estratégica (Ads)</h3>
+            <p>Inversión inteligente en Google Ads y Meta Ads para escalar tu negocio de forma predecible y rentable.
+            </p>
+            <ul class="feature-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Campañas con Enfoque en ROI</li>
+              <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                  style="color: var(--color-primary); margin-right: 10px;"></i> Segmentación por Intención</li>
+              <li><i class="fas fa-check" style="color: var(--color-primary); margin-right: 10px;"></i> Análisis y
+                Optimización Constante</li>
+            </ul>
           </div>
-          <h3>Creación de Sitios Web</h3>
-          <p>Diseño y desarrollo de sitios web profesionales, modernos y optimizados para convertir visitantes en
-            clientes.</p>
-          <a href="servicios/creacion-sitios.html" class="service-link">
-            Saber más <span>→</span>
-          </a>
-        </div>
-
-        <!-- Hospedaje Web -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-              <line x1="6" y1="6" x2="6.01" y2="6"></line>
-              <line x1="6" y1="18" x2="6.01" y2="18"></line>
-            </svg>
-          </div>
-          <h3>Hospedaje Web</h3>
-          <p>Hosting rápido, seguro y confiable para tu sitio web con soporte técnico incluido.</p>
-          <a href="servicios/hospedaje-web.html" class="service-link">
-            Saber más <span>→</span>
-          </a>
-        </div>
-
-        <!-- Marketing Digital -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <h3>Gestión de Tráfico Pago</h3>
-          <p>Campañas en Google Ads, Meta Ads y TikTok Ads para maximizar tu ROI y generar ventas.</p>
-          <a href="servicios/marketing-digital.html" class="service-link">
-            Saber más <span>→</span>
-          </a>
-        </div>
-
-        <!-- Tours Virtuales 360° -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M2 12h20"></path>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-              </path>
-            </svg>
-          </div>
-          <h3>Tours Virtuales 360°</h3>
-          <p>Muestra tu negocio desde adentro con recorridos virtuales profesionales en Google Maps y Google Street
-            View.</p>
-          <a href="https://wa.me/595983500802?text=Hola!%20Quiero%20información%20sobre%20Tours%20Virtuales%20360°"
-            class="service-link" target="_blank" rel="noopener">
-            Consultar <span>→</span>
+          <a href="servicios/marketing-digital.html" class="btn btn-secondary btn-full"
+            style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            Ver Planes y Beneficios <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section id="planes" class="section pricing-section">
+
+  <!-- Intent vs Entertainment Strategy Section -->
+  <section class="section section-intent">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Planes y <span class="text-gradient">Precios</span></h2>
-        <p>Soluciones escalables para cada etapa de tu negocio</p>
-        <div
-          style="background: rgba(1, 167, 238, 0.1); padding: 1rem; border-radius: var(--radius-lg); margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>💳 Facilidades de Pago:</strong> Financia tu
-            inversión en hasta 3 cuotas sin intereses (Entrega 40% + 2 pagos de 20% a 30/60 días).</p>
-          <p style="font-size: 0.85rem; opacity: 0.8;">*Excepto plan Start2GO: 2 pagos (Entrega 50% + saldo a 30
-            días).
-          </p>
-        </div>
-      </div>
-
-      <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-
-        <!-- Start2GO -->
-        <div class="pricing-card fade-in">
-          <div class="pricing-header">
-            <h3 class="pricing-title">Start2GO</h3>
-            <div class="pricing-price">
-              <span class="pricing-currency">Gs.</span>
-              1.500.000
-              <span class="pricing-period">/único</span>
+      <div class="intent-grid">
+        <div class="intent-text fade-in">
+          <h2 class="section-title" style="text-align: left; color: white;">En Google te buscan, en las Redes te <span
+              class="highlight">distraes</span></h2>
+          <p class="intent-lead"><strong>Hay una diferencia brutal entre un Like y una Venta.</strong></p>
+          <div class="intent-comparison">
+            <div class="comparison-item">
+              <div class="comparison-icon social-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 5.5 4.46 9.96 9.96 9.96 5.5 0 9.96-4.46 9.96-9.96 0-5.5-4.46-9.96-9.96-9.96zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                </svg>
+              </div>
+              <div class="comparison-content">
+                <h4>Redes Sociales: Entretenimiento</h4>
+                <p>El usuario busca ver qué cocinaron sus amigos o ver videos de risa. <strong>Es una interrupción a su
+                    tiempo libre.</strong></p>
+              </div>
             </div>
-            <p class="pricing-desc">Para emprendedores y pequeños comercios.</p>
-          </div>
-          <ul class="pricing-features">
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Perfil de Empresa en Google Completo</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Configuración de dirección y horarios</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Carga de productos y servicios</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Enlace de productos con ubicación</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Link para reseñas Google</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Hasta 3 fotos 360°</li>
-          </ul>
-          <div class="pricing-footer">
-            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Start2GO"
-              class="btn btn-secondary">Comenzar</a>
-          </div>
-        </div>
-
-        <!-- Biz2GO -->
-        <div class="pricing-card fade-in">
-          <div class="pricing-header">
-            <h3 class="pricing-title">Biz2GO</h3>
-            <div class="pricing-price">
-              <span class="pricing-currency">Gs.</span>
-              2.900.000
-              <span class="pricing-period">/único</span>
+            <div class="comparison-item active">
+              <div class="comparison-icon google-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" />
+                  <path fill="#01a7ee"
+                    d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.344-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0 5.582 0 0 5.582 0 12.24s5.582 12.24 12.24 12.24c6.912 0 11.491-4.853 11.491-11.7 0-.786-.086-1.385-.189-1.995H12.24z" />
+                </svg>
+              </div>
+              <div class="comparison-content">
+                <h4>Google & Maps: Intención</h4>
+                <p>Nadie abre Maps para ver fotos de playa. <strong>Lo abren porque DECIDIERON COMPRAR</strong>. Es
+                  demanda real y directa.</p>
+              </div>
             </div>
-            <p class="pricing-desc">Para profesionalizar tu presencia digital.</p>
           </div>
-          <ul class="pricing-features">
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Todo lo de Start2GO</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg><strong>Landing Page</strong> de presentación</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Botón directo a WhatsApp</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Video institucional para perfil</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Hasta 5 fotos 360°</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Consultoría visual</li>
-          </ul>
-          <div class="pricing-footer">
-            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Biz2GO"
-              class="btn btn-secondary">Elegir Biz2GO</a>
-          </div>
+          <p class="intent-conclusion">En PureteGO, te posicionamos frente al cliente que tiene la intención de pago, no
+            frente al que solo tiene el pulgar ocupado.</p>
         </div>
-
-        <!-- Pro2GO -->
-        <div class="pricing-card featured fade-in">
-          <div class="pricing-badge">Popular</div>
-          <div class="pricing-header">
-            <h3 class="pricing-title">Pro2GO</h3>
-            <div class="pricing-price">
-              <span class="pricing-currency">Gs.</span>
-              3.900.000
-              <span class="pricing-period">/único</span>
+        <div class="intent-visual fade-in">
+          <div class="comparison-card glass-card">
+            <div class="card-header">
+              <span class="status-badge"
+                style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">Escala
+                Mensual (Últimos 30 días)</span>
             </div>
-            <p class="pricing-desc">Salto de calidad en imagen y visibilidad.</p>
-          </div>
-          <ul class="pricing-features">
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Optimización Avanzada Google</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg><strong>Sitio Web Institucional (5 secc.)</strong></li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>SEO básico en sitio web</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Certificado SSL gratuito</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Video institucional</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Hasta 8 fotos 360°</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Entrenamiento mantenimiento Google</li>
-          </ul>
-          <div class="pricing-footer">
-            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Pro2GO" class="btn btn-primary">Elegir
-              Pro2GO</a>
-          </div>
-        </div>
-
-        <!-- Market2GO -->
-        <div class="pricing-card fade-in">
-          <div class="pricing-header">
-            <h3 class="pricing-title">Market2GO</h3>
-            <div class="pricing-price">
-              <span class="pricing-currency">Gs.</span>
-              5.900.000
-              <span class="pricing-period">/único</span>
+            <div class="card-stats">
+              <div class="stat-group">
+                <span class="stat-value">+270.000</span>
+                <span class="stat-label">Oportunidades de Venta</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-group">
+                <span class="stat-value">+35.000</span>
+                <span class="stat-label">Clientes en Puerta</span>
+              </div>
             </div>
-            <p class="pricing-desc">Para empezar a vender online (catálogo).</p>
           </div>
-          <ul class="pricing-features">
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg><strong>Sitio con Catálogo (20 prod.)</strong></li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>SEO optimizado para catálogo</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Configuración correos profesionales</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>SSL dedicado</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Hasta 10 fotos 360°</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Entrenamiento gestión catálogo</li>
-          </ul>
-          <div class="pricing-footer">
-            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20Market2GO"
-              class="btn btn-secondary">Elegir Market2GO</a>
-          </div>
-        </div>
-
-        <!-- e-commerce2GO -->
-        <div class="pricing-card fade-in">
-          <div class="pricing-header">
-            <h3 class="pricing-title">e-commerce2GO</h3>
-            <div class="pricing-price">
-              <span class="pricing-currency">Gs.</span>
-              7.900.000
-              <span class="pricing-period">/único</span>
-            </div>
-            <p class="pricing-desc">Tienda virtual completa y optimizada.</p>
-          </div>
-          <ul class="pricing-features">
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Optimización Premium Google</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg><strong>Tienda Virtual Completa (50 prod.)</strong></li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>SEO Completo (sitio + tienda)</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Integración local/online total</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Hasta 12 fotos 360°</li>
-            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>Entrenamiento administración tienda</li>
-          </ul>
-          <div class="pricing-footer">
-            <a href="https://wa.me/595983500802?text=Me%20interesa%20el%20plan%20e-commerce2GO"
-              class="btn btn-secondary">Elegir e-commerce</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO Section (Dark with Mockup) -->
-  <section class="section seo-section">
-    <div class="container">
-      <div class="seo-content">
-        <div class="seo-mockup slide-in-left">
-          <div class="phone-mockup">
-            <img src="img/google-search-mockup.png" alt="Tu empresa en las primeras posiciones de Google" width="350"
-              height="600">
-          </div>
-        </div>
-        <div class="seo-text slide-in-right">
-          <h2>¿Qué es la Búsqueda Orgánica y cómo puede ayudarte?</h2>
-          <p>
-            También llamada SEO (Search Engine Optimization), la búsqueda orgánica es una forma de aparecer en Google
-            sin pagar por publicidad. Un trabajo de SEO mejora la posición que tu empresa aparece en los buscadores,
-            además de mejorar la navegabilidad del usuario.
-          </p>
-          <p>
-            <strong>Gran parte de los consumidores dan preferencia a los sitios posicionados a través de la búsqueda
-              orgánica.</strong> Así, aumentas el tráfico de tu sitio sin necesidad de pagar por cada clic.
-          </p>
-          <a href="servicios/geomarketing.html" class="btn btn-primary btn-lg">
-            Conoce más
-          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Benefits / Numbers Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>¿Por qué elegir <span class="text-gradient">PureteGO</span>?</h2>
-        <p>Resultados comprobados para empresas en Paraguay y Brasil</p>
-      </div>
-
-      <div class="benefits-grid">
-        <div class="benefit-card fade-in">
-          <div class="benefit-number" data-counter="85">0</div>
-          <div class="benefit-label">+ Empresas optimizadas en Paraguay en 2025</div>
-        </div>
-        <div class="benefit-card fade-in">
-          <div class="benefit-number" data-counter="20">0</div>
-          <div class="benefit-label">+ Años de experiencia en Brasil y Paraguay</div>
-        </div>
-        <div class="benefit-card fade-in">
-          <div class="benefit-number" data-counter="27278">0</div>
-          <div class="benefit-label">Tráfico orgánico generado</div>
-        </div>
-        <div class="benefit-card fade-in">
-          <div class="benefit-number" data-counter="11458">0</div>
-          <div class="benefit-label">Rutas GPS generadas para clientes</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Differentiators Section -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>¿Por qué <span class="text-gradient">Elegirnos</span>?</h2>
-        <p>Somos socios de Google (Google Partner), lo que nos permite acceder a las últimas herramientas y
-          conocimientos directamente de la fuente</p>
-        <div class="google-badges">
-          <img src="img/google-partner.png" alt="Google Partner" class="google-badge">
-          <img src="img/google-street-view-trusted.jpg" alt="Google Street View Trusted Photographer"
-            class="google-badge">
-        </div>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 20l9-5-9-5-9 5 9 5z"></path>
-              <path d="M12 12l9-5-9-5-9 5 9 5z"></path>
-            </svg>
-          </div>
-          <h3>Estrategias Personalizadas</h3>
-          <p>Cada negocio es único, y nuestras soluciones se diseñan a medida para satisfacer sus necesidades
-            específicas y objetivos de crecimiento.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-              <line x1="9" y1="9" x2="15" y2="9"></line>
-              <line x1="9" y1="13" x2="15" y2="13"></line>
-              <line x1="9" y1="17" x2="12" y2="17"></line>
-            </svg>
-          </div>
-          <h3>Resultados Medibles y Auditables</h3>
-          <p>Le proporcionamos informes claros y detallados sobre el rendimiento de su inversión, demostrando el
-            impacto
-            real de nuestras acciones.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <h3>Un Equipo de Expertos</h3>
-          <p>Contamos con profesionales altamente calificados y apasionados por el marketing digital, comprometidos
-            con
-            la excelencia y la innovación.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </div>
-          <h3>Enfoque en el ROI</h3>
-          <p>Nuestro objetivo es que cada guaraní invertido en PureteGO se traduzca en un crecimiento significativo
-            para
-            su negocio.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <h3>Transparencia y Reportes Claros</h3>
-          <p>Trabajamos con métricas reales y paneles de control fáciles de entender, para que puedas ver claramente
-            cómo cada acción impacta en tus resultados.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
-              <polyline points="17 6 23 6 23 12"></polyline>
-            </svg>
-          </div>
-          <h3>Actualización Constante</h3>
-          <p>Nuestro equipo se capacita continuamente en nuevas herramientas y cambios de Google, asegurando que tu
-            negocio siempre esté un paso adelante.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Testimonials Section -->
   <section class="section">
@@ -786,114 +439,149 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Authority & Results (FAQ + Numbers) -->
   <section class="section section-dark">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Preguntas <span class="text-gradient">Frecuentes</span></h2>
-        <p>Resolvemos tus dudas sobre nuestros servicios de marketing digital</p>
+      <div class="authority-results-grid">
+        <!-- FAQ Column -->
+        <div class="faq-column">
+          <div class="section-header fade-in" style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: white; margin-bottom: 0.5rem;">Preguntas <span class="text-gradient">Frecuentes</span>
+            </h2>
+            <p>Resolvemos tus dudas sobre marketing estratégico.</p>
+          </div>
+
+          <div class="faq-container">
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Qué es PureteGO y cómo puede ayudar a mi negocio? <svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">PureteGO es una consultoría de marketing de alto impacto enfocada en SEO
+                  Local y GeoMarketing, diseñada para poner tu negocio frente a clientes listos para comprar.</div>
+              </div>
+            </div>
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Y cuánto cuesta, cuál é o valor da inversión? <svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  No vendemos paquetes genéricos. Diseñamos planes estratégicos personalizados. <strong>Nuestras
+                    soluciones inician en inversiones para microempresas hasta proyectos corporativos.</strong> Te
+                  invitamos a una consultoría gratuita para un presupuesto exacto.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Cuánto tiempo lleva ver resultados? <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">Los primeros resultados suelen ser visibles entre 30 y 45 días, con un
+                  crecimiento exponencial a medida que la autoridad digital se consolida.</div>
+              </div>
+            </div>
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Qué es el SEO Local y por qué lo necesito? <svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">El SEO Local optimiza tu presencia para que cuando alguien busque tu
+                  producto "cerca de mí" en Google, tú seas la primera opción. Es la diferencia entre ser invisible y
+                  dominar tu zona.</div>
+              </div>
+            </div>
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Ofrecen servicios fuera de Paraguay? <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">Sí, actualmente operamos en Paraguay y Brasil, brindando estrategias
+                  adaptadas a cada mercado regional para maximizar el alcance de nuestros clientes.</div>
+              </div>
+            </div>
+            <div class="faq-item fade-in">
+              <button class="faq-question">¿Cómo mido el ROI de mi inversión? <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg></button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">Proveemos reportes auditados de interacciones reales: llamadas,
+                  solicitudes de ruta y leads. No medimos "vistas", medimos oportunidades reales de facturación.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results/Numbers Column -->
+        <div class="results-column">
+          <div class="section-header fade-in" style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: white; margin-bottom: 0.5rem;">Impulsados por resultados <span
+                class="text-gradient">Orgánicos</span></h2>
+            <p>Números auditados (Dic 2025 - Ene 2026).</p>
+          </div>
+
+          <div class="results-grid-mini">
+            <div class="result-stat-card glass-card fade-in">
+              <div class="result-number" data-counter="87">0</div>
+              <div class="result-label">Empresas Optimizadas</div>
+            </div>
+            <div class="result-stat-card glass-card fade-in">
+              <div class="result-number" data-counter="270000">0</div>
+              <div class="result-label">Oportunidades de Venta</div>
+            </div>
+            <div class="result-stat-card glass-card fade-in">
+              <div class="result-number" data-counter="35000">0</div>
+              <div class="result-label">Direcciones en Google Maps (Cliente en puerta)</div>
+            </div>
+            <div class="result-stat-card glass-card fade-in">
+              <div class="result-number" data-counter="20">0</div>
+              <div class="result-label">Años de Exp. Internacional</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="faq-container">
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Qué es PureteGO y cómo puede ayudar a mi negocio?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              PureteGO es un servicio completo que mejora la visibilidad en línea de tu negocio a través de SEO para
-              Marketing Local, Presencia Web y Google My Business. Ayuda a aumentar el tráfico de tu sitio web,
-              generar
-              más clientes potenciales y mejorar el compromiso de los clientes.
-            </div>
-          </div>
-        </div>
+  <!-- Client Logo Wall (Infinite Premium Ticker) -->
+  <section class="logo-wall-section">
+    <div class="container">
+      <div class="logo-wall-wrapper fade-in">
+        <p class="logo-wall-title">Marcas que dominan el mercado con nosotros</p>
+        <div class="logo-ticker">
+          <div class="ticker-track">
+            <!-- Logos - Lote 1 -->
+            <div class="logo-item uass-special"><img src="img/logos/uass.png" alt="UASS" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/motomorini.png" alt="Moto Morini" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/alustiza.jpg" alt="Alustiza" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/carnescampo9.jpg" alt="Carnes Campo 9" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/cerro-cora.png" alt="Cerro Corá" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/hl.png" alt="HL" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/jv-butique.jpg" alt="JV Butique" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/mimo.jpg" alt="Mimo Locações" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/wksound.jpg" alt="WK Sound Pro" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/veterinaria-florida.jpg" alt="Veterinaria Florida"
+                loading="lazy"></div>
 
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Cómo funciona el SEO para Marketing Local?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Optimizamos tu perfil de negocio para aparecer en las primeras posiciones de Google Search y Google
-              Maps,
-              dirigiendo tráfico de alta calidad directamente a tu puerta. Esto incluye gestión de reseñas,
-              publicaciones y actualización constante de información.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Qué incluye el servicio de Presencia Web?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Creamos sitios web profesionales, intuitivos y optimizados para la conversión, que sirven como el centro
-              de su estrategia digital. Incluye diseño responsivo, optimización SEO, hosting y mantenimiento.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Cómo puede beneficiar a mi negocio Google My Business?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Convertimos su perfil de Google en una poderosa herramienta de captación de clientes, gestionando
-              reseñas,
-              publicaciones y asegurando que su información esté siempre actualizada y sea atractiva para los
-              buscadores
-              locales.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Cuánto tiempo lleva ver resultados con PureteGO?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Los primeros resultados suelen verse entre 30 y 45 días, pero el SEO es un proceso orgánico continuo.
-              Nuestros clientes han experimentado crecimientos significativos en visibilidad en los primeros meses de
-              trabajo conjunto.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item fade-in">
-          <button class="faq-question">
-            ¿Y cuánto cuesta, cuál es el valor de la inversión?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              En PureteGO ofrecemos soluciones inteligentes para todo tipo de empresa. Desde solo Gs. 3.500.000, te
-              brindamos una presencia digital estratégica: optimización SEO en Google y Google Maps, planificación de
-              palabras clave y sitio institucional. El hospedaje tiene un costo mensual de Gs. 75.000. ¡Aumentá tu
-              visibilidad online y hacé que te encuentren primero! Y lo mejor de todo: puedes invertir en hasta 3
-              cuotas
-              sin intereses.
-            </div>
+            <!-- Duplicação para efeito infinito -->
+            <div class="logo-item uass-special"><img src="img/logos/uass.png" alt="UASS" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/motomorini.png" alt="Moto Morini" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/alustiza.jpg" alt="Alustiza" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/carnescampo9.jpg" alt="Carnes Campo 9" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/cerro-cora.png" alt="Cerro Corá" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/hl.png" alt="HL" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/jv-butique.jpg" alt="JV Butique" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/mimo.jpg" alt="Mimo Locações" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/wksound.jpg" alt="WK Sound Pro" loading="lazy"></div>
+            <div class="logo-item"><img src="img/logos/veterinaria-florida.jpg" alt="Veterinaria Florida"
+                loading="lazy"></div>
           </div>
         </div>
       </div>
@@ -910,13 +598,15 @@
 
       <div class="blog-grid">
         <article class="blog-card fade-in">
-          <img src="img/blog/seo-local-google.jpg" alt="SEO Local Paraguay" class="blog-card-image" loading="lazy">
+          <a href="blog/articulos/intencion-vs-entretenimiento-estrategia-ganadora.html">
+            <img src="img/blog/intent-vs-entertainment.png" alt="Intención vs Entretenimiento" class="blog-card-image"
+              loading="lazy">
+          </a>
           <div class="blog-card-content">
-            <span class="blog-card-meta">SEO Local • 5 min lectura</span>
-            <h3>Cómo aparecer en las primeras posiciones de Google</h3>
-            <p>Descubre las estrategias más efectivas para posicionar tu negocio local en los resultados de búsqueda
-              de
-              Google.</p>
+            <span class="blog-card-meta">Estrategia • 6 min lectura</span>
+            <h3><a href="blog/articulos/intencion-vs-entretenimiento-estrategia-ganadora.html">Intención vs
+                Entretenimiento: ¿Cuál vende más?</a></h3>
+            <p>Auditamos 270.000 interacciones reales para entender por qué Google Maps domina a las redes sociales.</p>
           </div>
         </article>
 
@@ -958,14 +648,9 @@
       <p>Solicita una consultoría gratuita y descubre cómo podemos ayudarte a crecer con el poder del marketing
         digital
         y el SEO local.</p>
-      <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20gustaría%20solicitar%20una%20consultoría%20gratuita%20para%20mi%20negocio."
-        class="btn btn-lg" target="_blank" rel="noopener">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
+      <button id="btnCTA" class="btn btn-lg btn-primary-white">
         Solicitar Consultoría Gratis
-      </a>
+      </button>
     </div>
   </section>
 
@@ -1013,9 +698,9 @@
 
       <!-- Google Badges Footer -->
       <div class="footer-badges">
-        <img src="img/google-partner.png" alt="Google Partner" class="footer-google-badge">
+        <img src="img/google-partner.png" alt="Google Partner" class="footer-google-badge" loading="lazy">
         <img src="img/google-street-view-trusted.jpg" alt="Google Street View Trusted Photographer"
-          class="footer-google-badge">
+          class="footer-google-badge" loading="lazy">
       </div>
 
       <div class="footer-bottom">
@@ -1054,6 +739,322 @@
     </svg>
   </a>
 
+
+  <!-- Consultation Form Modal -->
+  <div id="modalConsultoria" class="modal-consultoria">
+    <div class="modal-content-consultoria">
+      <div class="modal-header-consultoria">
+        <h2>Consultoría Gratis</h2>
+        <button class="modal-close-consultoria" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="modal-body-consultoria">
+        <div class="modal-disclaimer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <p><strong>Consultoría gratuita</strong> disponible solo para empresas ubicadas en <strong>Gran
+              Asunción</strong>: Capiatá, Luque, San Lorenzo, Lambaré, Fernando de la Mora, Limpio, Ñemby, Mariano Roque
+            Alonso, Villa Elisa, San Antonio, Ypané e Itauguá.</p>
+        </div>
+
+        <form id="formConsultoria">
+          <!-- Form processed via JS to PHP & WhatsApp -->
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo <span class="required">*</span></label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez" minlength="3">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono">Teléfono con WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+595 981 234 567"
+                pattern="^\+?595\d{9}$|^09\d{8}$">
+              <small>Formato: +595981234567 o 0981234567</small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="ejemplo@empresa.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="empresa">Nombre de la Empresa <span class="required">*</span></label>
+              <input type="text" id="empresa" name="empresa" required placeholder="Mi Empresa S.A." minlength="2">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="direccion">Dirección de la Empresa <span class="required">*</span></label>
+              <textarea id="direccion" name="direccion" required rows="2" placeholder="Av. España c/ Brasil, Asunción"
+                minlength="10"></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cargo">Su Cargo en la Empresa <span class="required">*</span></label>
+              <input type="text" id="cargo" name="cargo" required
+                placeholder="Gerente General, Director de Marketing, etc." minlength="3">
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="btnCancelar">Cancelar</button>
+            <button type="submit" class="btn-primary-form">Solicitar Consultoría</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Styles -->
+  <style>
+    .modal-consultoria {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-consultoria.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content-consultoria {
+      background: white;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.3s ease;
+    }
+
+    .modal-header-consultoria {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 2rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .modal-header-consultoria h2 {
+      margin: 0;
+      color: var(--color-primary);
+      font-size: 1.75rem;
+    }
+
+    .modal-close-consultoria {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #9ca3af;
+      cursor: pointer;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+
+    .modal-close-consultoria:hover {
+      background-color: #f3f4f6;
+      color: #374151;
+    }
+
+    .modal-body-consultoria {
+      padding: 2rem;
+    }
+
+    .modal-disclaimer {
+      background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+      border-left: 4px solid var(--color-primary);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .modal-disclaimer svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--color-primary);
+    }
+
+    .modal-disclaimer p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #1e3a8a;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row:has(textarea) {
+      grid-template-columns: 1fr;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .form-group .required {
+      color: #dc2626;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .form-group input:invalid:not(:placeholder-shown),
+    .form-group textarea:invalid:not(:placeholder-shown) {
+      border-color: #fca5a5;
+    }
+
+    .form-group small {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .btn-secondary {
+      padding: 0.75rem 1.5rem;
+      background: #f3f4f6;
+      color: #374151;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    .btn-primary-form {
+      padding: 0.75rem 2rem;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary-form:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .modal-content-consultoria {
+        width: 95%;
+        max-height: 95vh;
+      }
+
+      .modal-header-consultoria,
+      .modal-body-consultoria {
+        padding: 1.5rem;
+      }
+
+      .modal-header-consultoria h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
   <!-- Scripts -->
   <!-- Scroll Up Button -->
   <button id="scroll-up" class="scroll-up" aria-label="Volver arriba">
@@ -1063,11 +1064,82 @@
     </svg>
   </button>
 
+  <!-- Modal: Auditoría B2B -->
+  <div id="modalAuditoria" class="modal-consultoria">
+    <div class="modal-content-consultoria">
+      <div class="modal-header-consultoria">
+        <h2>Solicitar Auditoría Digital</h2>
+        <button class="modal-close-auditoria">&times;</button>
+      </div>
+      <div class="modal-body-consultoria">
+        <div class="modal-disclaimer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <p>Complete los datos para que nuestro equipo realice un análisis previo de su presencia digital antes de la
+            consultoría.</p>
+        </div>
+        <form id="formAuditoria">
+          <input type="hidden" name="plan_seleccionado" id="inputPlanAuditoria">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="empresa_auditoria">Nombre de la Empresa <span class="required">*</span></label>
+              <input type="text" id="empresa_auditoria" name="empresa" required placeholder="Ej: Importadora San Luis">
+            </div>
+            <div class="form-group">
+              <label for="rubro_auditoria">Rubro/Sector <span class="required">*</span></label>
+              <input type="text" id="rubro_auditoria" name="rubro" required
+                placeholder="Ej: Industrial, Médico, Comercio">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="web_auditoria">Sitio Web Actual (Si tiene)</label>
+              <input type="url" id="web_auditoria" name="sitio_web" placeholder="https://www.tuempresa.com">
+            </div>
+            <div class="form-group">
+              <label for="whatsapp_auditoria">WhatsApp de Contacto <span class="required">*</span></label>
+              <input type="tel" id="whatsapp_auditoria" name="whatsapp" required placeholder="+595 9xx xxx xxx">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-secondary btn-cancelar-auditoria">Cancelar</button>
+            <button type="submit" class="btn-primary-form">Enviar Solicitud</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+595983500802" class="sticky-btn sticky-btn-call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.81 12.81 0 0 0 .62 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.62A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/595983500802?text=Solicito%20Consultoría%20Gratuita" class="sticky-btn sticky-btn-wa"
+      target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+
   <script src="js/main.js"></script>
   <script>
-    // Initialize counters when visible
+    // Initialize counters when visible (Called from main.js but reinforced here)
     document.addEventListener('DOMContentLoaded', function () {
-      initCounters();
+      if (typeof initCounters === 'function') {
+        initCounters();
+      }
     });
   </script>
 </body>
