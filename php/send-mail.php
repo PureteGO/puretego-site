@@ -4,69 +4,102 @@
  * Mais seguro, mais rápido e evita o SPAM.
  */
 
-// 1. Incluir os arquivos do PHPMailer (Você deve subir esses arquivos para uma pasta chamada 'libs/PHPMailer')
+// 1. Incluir os arquivos do PHPMailer
+// Usando __DIR__ para garantir caminhos absolutos corretos independente de onde o script é chamado
+require __DIR__ . '/libs/PHPMailer/Exception.php';
+require __DIR__ . '/libs/PHPMailer/PHPMailer.php';
+require __DIR__ . '/libs/PHPMailer/SMTP.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'libs/PHPMailer/Exception.php';
-require 'libs/PHPMailer/PHPMailer.php';
-require 'libs/PHPMailer/SMTP.php';
+header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // --- CONFIGURAÇÃO DO SERVIDOR SMTP (Pegue esses dados no seu cPanel) ---
-        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;         // Ative para debugar se der erro
+        // --- CONFIGURAÇÃO DO SERVIDOR SMTP ---
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;         // Debug (desativado em produção)
         $mail->isSMTP();
-        $mail->Host       = 'mail.puretego.online';        // Endereço do servidor SMTP do cPanel
+        $mail->Host       = 'mail.puretego.online';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'leads@puretego.online';       // Seu e-mail criado no cPanel
-        $mail->Password   = 'Mel_170803$';              // Senha do seu e-mail do cPanel
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   // TLS ou SSL (Porta 465 geralmente é SMTPS)
+        $mail->Username   = 'leads@puretego.online';
+        $mail->Password   = 'Mel_170803$';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
         $mail->CharSet    = 'UTF-8';
 
         // --- DESTINATÁRIOS ---
-        $mail->setFrom('leads@puretego.online', 'Sistema PureteGO');
-        $mail->addAddress('puretegoonline@gmail.com');     // Onde você quer receber os leads
+        // Quem envia (deve ser o mesmo do Username para evitar bloqueios)
+        $mail->setFrom('leads@puretego.online', 'PureteGO - Leads');
         
-        $responder_para = isset($_POST['email']) ? $_POST['email'] : 'puretegoonline@gmail.com';
-        $mail->addReplyTo($responder_para);
+        // Quem recebe (o admin do site)
+        $mail->addAddress('puretegoonline@gmail.com');
+        $mail->addBCC('contacto@puretego.online'); // Cópia oculta para backup
+        
+        // Responder para (o cliente)
+        $email_cliente = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
+        if ($email_cliente && filter_var($email_cliente, FILTER_VALIDATE_EMAIL)) {
+            $mail->addReplyTo($email_cliente);
+        }
 
         // --- CONTEÚDO DO E-MAIL ---
-        $tipo_form = isset($_POST['form_type']) ? $_POST['form_type'] : 'Contacto General';
-        $empresa = strip_tags($_POST['empresa']);
+        $tipo_form = isset($_POST['form_type']) ? strip_tags($_POST['form_type']) : 'Contacto General';
+        $empresa = isset($_POST['empresa']) ? strip_tags($_POST['empresa']) : 'N/A';
+        $nombre = isset($_POST['nombre']) ? strip_tags($_POST['nombre']) : 'N/A';
         
         $mail->isHTML(true);
-        $mail->Subject = "[PureteGO Lead] $tipo_form - $empresa";
+        $mail->Subject = "[Novo Lead] $tipo_form - $empresa ($nombre)";
 
-        // Montando o corpo do e-mail em HTML elegante
-        $body = "<h2>Nuevo Lead capturado desde el sitio web</h2>";
-        $body .= "<p><strong>Tipo de Solicitud:</strong> " . strtoupper($tipo_form) . "</p>";
-        $body .= "<hr>";
-        $body .= "<ul>";
+        // Montando o corpo do e-mail
+        $body = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;'>";
+        $body .= "<div style='background-color: #00c896; color: white; padding: 20px; text-align: center;'>";
+        $body .= "<h2 style='margin:0;'>Novo Lead Capturado</h2>";
+        $body .= "<p style='margin:5px 0 0 0;'>PureteGO Website</p>";
+        $body .= "</div>";
+        
+        $body .= "<div style='padding: 20px; background-color: #ffffff;'>";
+        $body .= "<p style='font-size: 16px; color: #333;'><strong>Solução de Interesse:</strong> <span style='color: #00c896;'>" . strtoupper($tipo_form) . "</span></p>";
+        $body .= "<hr style='border: 0; border-top: 1px solid #eee; margin: 20px 0;'>";
+        
+        $body .= "<table style='width: 100%; border-collapse: collapse;'>";
         foreach ($_POST as $key => $value) {
             if ($key != 'form_type' && $value != '') {
                 $label = ucfirst(str_replace('_', ' ', $key));
-                $body .= "<li><strong>$label:</strong> " . nl2br(strip_tags($value)) . "</li>";
+                $clean_value = nl2br(strip_tags($value));
+                $body .= "<tr>";
+                $body .= "<td style='padding: 10px 0; width: 40%; color: #666; font-weight: bold; border-bottom: 1px solid #f5f5f5;'>$label</td>";
+                $body .= "<td style='padding: 10px 0; width: 60%; color: #333; border-bottom: 1px solid #f5f5f5;'>$clean_value</td>";
+                $body .= "</tr>";
             }
         }
-        $body .= "</ul>";
-        $body .= "<hr>";
-        $body .= "<p><em>Enviado desde el servidor PureteGO el " . date('d/m/Y H:i') . "</em></p>";
+        $body .= "</table>";
+        $body .= "</div>";
+        
+        $body .= "<div style='background-color: #f9f9f9; padding: 15px; text-align: center; font-size: 12px; color: #999;'>";
+        $body .= "Enviado de forma segura via servidor PureteGO • " . date('d/m/Y H:i');
+        $body .= "</div>";
+        $body .= "</div>";
 
         $mail->Body = $body;
+        // Plain text version for non-HTML clients
+        $mail->AltBody = "Novo Lead: $tipo_form\nEmpresa: $empresa\n\n(Veja a versão HTML para detalhes)";
 
         $mail->send();
-        echo json_encode(["status" => "success", "message" => "Email enviado con éxito por SMTP"]);
+        
+        // Retorno JSON Sucesso
+        echo json_encode(["status" => "success", "message" => "Mensagem enviada com sucesso!", "redirect" => true]);
 
     } catch (Exception $e) {
-        header('HTTP/1.1 500 Error');
-        echo json_encode(["status" => "error", "message" => "Erro ao enviar: {$mail->ErrorInfo}"]);
+        // Retorno JSON Erro
+        http_response_code(500);
+        echo json_encode(["status" => "error", "message" => "Erro técnico no envio: " . $mail->ErrorInfo]);
     }
 } else {
-    echo "Acesso negado.";
+    // Acesso direto negado
+    http_response_code(403);
+    echo json_encode(["status" => "error", "message" => "Acesso negado"]);
 }
 ?>
