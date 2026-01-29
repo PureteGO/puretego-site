@@ -416,35 +416,62 @@
     background: linear-gradient(to left, #0f172a, transparent);
 }
 
+/* =========================================
+   LOGO WALL (Clean Implementation)
+   ========================================= */
+.logo-wall-wrapper {
+    position: relative;
+    padding: var(--space-20) 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .logo-wall-title {
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #475569;
-    margin-bottom: var(--space-10);
-    font-weight: 800;
     text-align: center;
+    color: #ffffff;
+    font-size: var(--text-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    opacity: 0.95;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logo-ticker {
+    position: relative;
     display: flex;
     overflow: hidden;
     user-select: none;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .ticker-track {
     display: flex;
-    gap: var(--space-16);
-    animation: ticker linear infinite 80s;
-    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    /* 
+       ANIMATION STRATEGY: 
+       We will have TWO steps but loop seamlessly.
+       We move -33.333% because we have 3 batches.
+    */
+    animation: ticker-slide 60s linear infinite;
+    width: max-content;
+    will-change: transform;
     padding: 0;
     margin: 0;
     list-style: none;
-    width: max-content;
-    will-change: transform;
 }
 
-@keyframes ticker {
+.logo-ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes ticker-slide {
     0% {
         transform: translateX(0);
     }
@@ -455,30 +482,31 @@
 }
 
 .logo-item {
-    flex-shrink: 0;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 100px;
 }
 
 .logo-item img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    max-width: 200px;
+    object-fit: contain;
     filter: none;
-    opacity: 1;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.9;
+    transition: all 0.3s ease;
 }
 
-/* Hover reveal individual logo beauty */
 .logo-item:hover img {
-    transform: scale(1.15);
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
 }
 
-/* UASS & More Important Logos always visible with colors/glow */
 .uass-special img {
-    height: 70px !important;
-    filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 215, 0, 0.3)) !important;
+    height: 60px !important;
     opacity: 1 !important;
 }
 

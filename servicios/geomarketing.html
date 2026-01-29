@@ -13,22 +13,25 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- SEO Meta Tags -->
-    <title>GeoMarketing y SEO Local | PureteGO Paraguay</title>
+    <title>GeoMarketing y SEO Local | Domina tu Mercado en Paraguay | PureteGO</title>
     <meta name="description"
-        content="Atrae más clientes de tu zona con GeoMarketing y SEO Local. Posiciona tu negocio en Google Maps y búsquedas locales. Consultoría gratis en Paraguay.">
+        content="Atrae más clientes de tu zona con GeoMarketing y SEO Local. Posicionamos tu negocio en el TOP de Google Maps y búsquedas locales en Paraguay. ¡Solicita tu consultoría gratis!">
     <meta name="keywords"
-        content="geomarketing Paraguay, SEO local, Google Maps negocio, búsqueda local, marketing geolocalizado, posicionamiento local">
+        content="geomarketing Paraguay, SEO local Paraguay, Google Maps para empresas, marketing geolocalizado, posicionamiento local Asunción">
+    <meta name="author" content="PureteGO">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.puretego.online/servicios/geomarketing.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="GeoMarketing y SEO Local | PureteGO Paraguay">
+    <meta property="og:title" content="GeoMarketing y SEO Local | Domina tu Mercado | PureteGO">
     <meta property="og:description"
-        content="Atrae más clientes de tu zona con estrategias de GeoMarketing y SEO Local.">
+        content="Posicionamos tu negocio frente a clientes listos para comprar en tu zona. Estrategias de GeoMarketing de élite.">
     <meta property="og:url" content="https://www.puretego.online/servicios/geomarketing.html">
+    <meta property="og:image" content="https://www.puretego.online/img/og-image.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +40,124 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .service-hero {
+            padding: 160px 0 100px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--color-white), transparent);
+        }
+
+        .feature-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .premium-card-v2 {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-card-v2:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--color-primary);
+        }
+
+        .premium-card-v2 i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .pricing-section-inner {
+            background: var(--gradient-dark);
+            padding: 80px 0;
+            border-radius: 40px;
+            margin: 60px 0;
+            color: white;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .package-card.featured {
+            background: rgba(1, 167, 238, 0.1);
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1.5rem 0;
+            font-family: var(--font-display);
+        }
+
+        .package-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        .package-features {
+            text-align: left;
+            margin: 2rem 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .package-features li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .package-features i {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 992px) {
+            .package-card.featured {
+                transform: scale(1);
+                margin: 2rem 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -45,33 +165,29 @@
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <a href="/" class="logo">
+                <a href="../index.html" class="logo">
                     <img src="../img/logo.png" alt="PureteGO" width="180" height="40">
                 </a>
+
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="/" class="nav-link">Inicio</a></li>
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
                         <li class="nav-item">
-                            <a href="/#servicios" class="nav-link">Servicios ▾</a>
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
                             <div class="nav-dropdown">
-                                <div class="nav-dropdown-title">Pacotes Digitales</div>
-                                <a href="/#precios">Start2GO - Gs. 1.500.000</a>
-                                <a href="/#precios">Biz2GO - Gs. 2.900.000</a>
-                                <a href="/#precios">Pro2GO - Gs. 3.900.000</a>
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
                                 <div class="nav-dropdown-divider"></div>
-                                <div class="nav-dropdown-title">Hosting Web</div>
-                                <a href="/servicios/planes-hosting.html">Planes de Hosting</a>
-                                <div class="nav-dropdown-divider"></div>
-                                <div class="nav-dropdown-title">Otros Servicios</div>
-                                <a href="/servicios/geomarketing.html">GeoMarketing</a>
-                                <a href="/servicios/perfil-empresarial.html">Perfil Empresarial Google</a>
-                                <a href="/servicios/creacion-sitios.html">Creación de Sitios Web</a>
-                                <a href="/servicios/marketing-digital.html">Gesti�n de Tr�fico Pago</a>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
                             </div>
                         </li>
-                        <li><a href="/nosotros.html" class="nav-link">Nosotros</a></li>
-                        <li><a href="/blog/" class="nav-link">Blog</a></li>
-                        <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
                     </ul>
                     <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20GeoMarketing."
                         class="btn btn-primary" target="_blank">Consultoría Gratis</a>
@@ -81,216 +197,218 @@
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" style="min-height: 70vh;">
+    <!-- Hero Section -->
+    <section class="service-hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1>GeoMarketing y <span class="highlight">SEO Local</span></h1>
+                    <h1 class="text-white">DOMINA TU <span class="text-gradient">MERCADO LOCAL</span></h1>
                     <p class="hero-subtitle">
-                        Atrae clientes de tu zona y vende más con el poder del marketing geolocalizado. Posiciona tu
-                        negocio en Google Maps y en las búsquedas locales.
+                        No solo te ponemos en el mapa, te ponemos en la cima de Google Maps. Capturamos clientes con
+                        alta intención de compra en el momento exacto en que te necesitan.
                     </p>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20información%20sobre%20GeoMarketing."
-                            class="btn btn-whatsapp btn-lg" target="_blank">
-                            Solicitar Consultoría Gratis
-                        </a>
+                        <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20dominar%20mi%20mercado%20local%20con%20GeoMarketing."
+                            class="btn btn-primary btn-lg">Solicitar Consultoría Gratis</a>
+                        <a href="#proceso" class="btn btn-secondary btn-lg"
+                            style="color: white; border-color: white;">Ver Estrategia</a>
                     </div>
                 </div>
                 <div class="hero-image slide-in-right">
-                    <img src="../img/hero-mockup.png" alt="GeoMarketing" width="400" height="450">
+                    <div class="glass-card"
+                        style="padding: 2rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2);">
+                        <img src="../img/google-business-profile.png" alt="Google Maps Domination"
+                            style="border-radius: 20px;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ¿Qué es GeoMarketing? -->
+    <!-- Value Proposition -->
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>¿Qué es el <span class="text-gradient">GeoMarketing</span>?</h2>
-                <p>El marketing que conecta tu negocio con clientes cercanos</p>
+                <h2 class="section-title">¿Por qué tu negocio necesita <span class="text-gradient">GeoMarketing</span>?
+                </h2>
+                <p>El 97% de las personas buscan negocios locales en Google antes de comprar.</p>
             </div>
 
-            <div class="seo-content"
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div class="fade-in">
-                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        El <strong>GeoMarketing</strong> es una estrategia que utiliza datos de ubicación para orientar
-                        tus esfuerzos publicitarios de manera más precisa. Combina información geográfica con análisis
-                        de mercado para identificar dónde están tus clientes potenciales.
-                    </p>
-                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        <strong>Más del 97% de los consumidores buscan negocios locales online.</strong> Si tu empresa
-                        no aparece cuando alguien busca cerca de tu ubicación, estás perdiendo clientes todos los días.
-                    </p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
-                            <span>Aparecer en Google Maps cuando buscan tu servicio</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
-                            <span>Atraer clientes que están cerca y listos para comprar</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.25rem;">✓</span>
-                            <span>Destacar sobre la competencia en búsquedas locales</span>
-                        </li>
-                    </ul>
+            <div class="feature-grid-premium">
+                <div class="premium-card-v2 fade-in">
+                    <i class="fas fa-map-location-dot"></i>
+                    <h3>Presencia en Google Maps</h3>
+                    <p>Aparece en el "Local Pack" de Google (los 3 primeros resultados), captando el 75% de los clics de
+                        tu zona.</p>
                 </div>
-                <div class="fade-in" style="text-align: center;">
-                    <img src="../img/geomarketing-illustration.png" alt="GeoMarketing ilustración"
-                        style="max-width: 100%;">
+                <div class="premium-card-v2 fade-in">
+                    <i class="fas fa-users-viewfinder"></i>
+                    <h3>Intención de Compra Alta</h3>
+                    <p>Nadie busca "Cerrajero cerca de mí" por entretenimiento. Son clientes listos para contratar o
+                        comprar ahora mismo.</p>
+                </div>
+                <div class="premium-card-v2 fade-in">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Dominio de Zona</h3>
+                    <p>Bloqueamos a tu competencia en tu radio de acción, convirtiéndote en la autoridad indiscutible de
+                        tu barrio o ciudad.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Beneficios -->
-    <section class="section section-dark">
+    <!-- Intent Comparison (From Index) -->
+    <section class="section section-intent" style="background: var(--gradient-dark); margin: 4rem 0; border-radius: 0;">
+        <div class="container">
+            <div class="intent-grid">
+                <div class="intent-text fade-in">
+                    <h2 class="section-title" style="text-align: left; color: white;">En Google te buscan, en las Redes
+                        te <span class="highlight">distraes</span></h2>
+                    <p class="intent-lead" style="color: white;"><strong>Hay una diferencia brutal entre un Like y una
+                            Venta.</strong></p>
+                    <div class="intent-comparison">
+                        <div class="comparison-item active">
+                            <div class="comparison-icon google-icon">
+                                <i class="fas fa-search-location"></i>
+                            </div>
+                            <div class="comparison-content">
+                                <h4 style="color: white;">Google & Maps: Intención</h4>
+                                <p style="color: rgba(255,255,255,0.8);">Lo abren porque <strong>YA DECIDIERON
+                                        COMPRAR</strong>. Es demanda real, directa y geolocalizada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intent-visual fade-in">
+                    <div class="glass-card" style="padding: 2.5rem; border-radius: 24px;">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--color-primary);">+270.000</div>
+                        <div style="color: white; font-size: 1.2rem; opacity: 0.9;">Oportunidades de Venta generadas en
+                            Paraguay</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Plans -->
+    <section id="precios" class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Beneficios del <span class="text-gradient">GeoMarketing</span></h2>
+                <h2>Planes de <span class="text-gradient">Crecimiento Local</span></h2>
+                <p>Soluciones escalables para cada etapa de tu negocio.</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3>Visibilidad en Google Maps</h3>
-                    <p>Tu negocio aparece cuando personas cercanas buscan tus productos o servicios.</p>
-                </div>
+            <div class="pricing-section-inner">
+                <div class="container">
+                    <div class="services-grid" style="gap: 2rem;">
+                        <!-- Plan Start -->
+                        <div class="package-card fade-in">
+                            <h3 style="color: white;">Start2GO</h3>
+                            <p style="color: rgba(255,255,255,0.7);">Para nuevos negocios</p>
+                            <div class="package-price">1.500.000 <span>Gs.</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Optimización Google Maps</li>
+                                <li><i class="fas fa-check"></i> 5 Fotos Profesionales</li>
+                                <li><i class="fas fa-check"></i> Configuración SEO Local</li>
+                                <li><i class="fas fa-check"></i> Soporte vía WhatsApp</li>
+                            </ul>
+                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Start2GO."
+                                class="btn btn-secondary" style="color: white; border-color: white; width: 100%;">Elegir
+                                Plan</a>
+                        </div>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3>Clientes Calificados</h3>
-                    <p>Atrae personas que realmente están buscando lo que ofreces en tu área.</p>
-                </div>
+                        <!-- Plan Biz -->
+                        <div class="package-card featured fade-in">
+                            <div
+                                style="position: absolute; top: 1rem; right: 1rem; background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">
+                                MÁS POPULAR</div>
+                            <h3 style="color: white;">Biz2GO</h3>
+                            <p style="color: rgba(255,255,255,0.7);">Crecimiento acelerado</p>
+                            <div class="package-price">2.900.000 <span>Gs.</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Todo lo de Start2GO</li>
+                                <li><i class="fas fa-check"></i> Gestión de Reseñas</li>
+                                <li><i class="fas fa-check"></i> 10 Post Mensuales</li>
+                                <li><i class="fas fa-check"></i> Fotos 360° del local</li>
+                                <li><i class="fas fa-check"></i> Reporte Auditado</li>
+                            </ul>
+                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Biz2GO."
+                                class="btn btn-primary" style="width: 100%;">Elegir Plan</a>
+                        </div>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
+                        <!-- Plan Pro -->
+                        <div class="package-card fade-in">
+                            <h3 style="color: white;">Pro2GO</h3>
+                            <p style="color: rgba(255,255,255,0.7);">Dominación absoluta</p>
+                            <div class="package-price">3.900.000 <span>Gs.</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Todo lo de Biz2GO</li>
+                                <li><i class="fas fa-check"></i> SEO Local Multiciudad</li>
+                                <li><i class="fas fa-check"></i> Campañas Ads Incluidas</li>
+                                <li><i class="fas fa-check"></i> Consultoría Estratégica</li>
+                                <li><i class="fas fa-check"></i> Gestión 24/7</li>
+                            </ul>
+                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Pro2GO."
+                                class="btn btn-secondary" style="color: white; border-color: white; width: 100%;">Elegir
+                                Plan</a>
+                        </div>
                     </div>
-                    <h3>Mayor Retorno</h3>
-                    <p>Inversión más eficiente al dirigir tus esfuerzos a clientes con alta intención de compra.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Ventaja Competitiva</h3>
-                    <p>Destaca frente a competidores que no optimizan su presencia local.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </div>
-                    <h3>Reputación Online</h3>
-                    <p>Gestión de reseñas y valoraciones para construir confianza.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3>Métricas Claras</h3>
-                    <p>Reportes detallados de cómo los clientes te encuentran y contactan.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cómo Funciona -->
+    <!-- FAQ -->
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>¿Cómo <span class="text-gradient">Funciona</span>?</h2>
-                <p>Nuestro proceso en 4 pasos simples</p>
+                <h2>Dudas <span class="text-gradient">Frecuentes</span></h2>
             </div>
-
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;" class="fade-in">
-                <div style="text-align: center; padding: 2rem;">
-                    <div
-                        style="width: 60px; height: 60px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem; font-weight: bold;">
-                        1</div>
-                    <h4>Análisis</h4>
-                    <p style="color: rgba(12,12,13,0.7); font-size: 0.9rem;">Evaluamos tu presencia actual y la de tu
-                        competencia local</p>
+            <div style="max-width: 850px; margin: 0 auto;">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Cuánto tiempo tarda en verse resultados? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Los primeros movimientos en el ranking y el aumento de llamadas suelen notarse entre los 15
+                            y 30 días. La dominación completa de palabras clave competitivas toma entre 3 y 6 meses.
+                        </div>
+                    </div>
                 </div>
-
-                <div style="text-align: center; padding: 2rem;">
-                    <div
-                        style="width: 60px; height: 60px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem; font-weight: bold;">
-                        2</div>
-                    <h4>Optimización</h4>
-                    <p style="color: rgba(12,12,13,0.7); font-size: 0.9rem;">Optimizamos tu perfil de Google y presencia
-                        local</p>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Necesito tener mi ficha de Google ya creada? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No es necesario. Si no la tienes, nosotros nos encargamos de todo el proceso de creación y
+                            verificación. Si ya la tienes, realizamos una auditoría profunda para corregir errores que
+                            te están haciendo perder clientes.
+                        </div>
+                    </div>
                 </div>
-
-                <div style="text-align: center; padding: 2rem;">
-                    <div
-                        style="width: 60px; height: 60px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem; font-weight: bold;">
-                        3</div>
-                    <h4>Estrategia</h4>
-                    <p style="color: rgba(12,12,13,0.7); font-size: 0.9rem;">Implementamos estrategias de contenido y
-                        reputación</p>
-                </div>
-
-                <div style="text-align: center; padding: 2rem;">
-                    <div
-                        style="width: 60px; height: 60px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem; font-weight: bold;">
-                        4</div>
-                    <h4>Resultados</h4>
-                    <p style="color: rgba(12,12,13,0.7); font-size: 0.9rem;">Monitoreamos y reportamos tu crecimiento
-                    </p>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Cómo puedo medir el retorno de mi inversión? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Te proporcionamos un panel de control con números reales: cuántas personas llamaron, cuántas
+                            pidieron ruta para llegar a tu local y cuántas visitaron tu sitio web directamente desde
+                            Maps.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para atraer más clientes de tu zona?</h2>
-            <p>Solicita una consultoría gratuita y descubre cómo el GeoMarketing puede transformar tu negocio.</p>
-            <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20una%20consultoría%20sobre%20GeoMarketing%20para%20mi%20negocio."
-                class="btn btn-lg" target="_blank">
-                Solicitar Consultoría Gratis
-            </a>
+            <h2 class="text-white">¿Listo para que tu teléfono no deje de sonar?</h2>
+            <p class="text-white mb-8">Únete a las más de 87 empresas que ya dominan su zona con nosotros.</p>
+            <a href="https://wa.me/595983500802?text=¡Hola!%20Quiero%20una%20consultoría%20gratis%20de%20GeoMarketing."
+                class="btn btn-lg btn-primary" style="background: white; color: var(--color-primary);">¡Solicitar
+                Auditoría Gratis!</a>
         </div>
     </section>
 
@@ -300,32 +418,32 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="../img/logo.png" alt="PureteGO" width="180" height="40">
-                    <p>Agencia de marketing digital especializada en GeoMarketing y SEO Local en Paraguay.</p>
+                    <p>Agencia multinacional especialista en GeoMarketing y SEO Local. Presencia en Paraguay y Brasil.
+                    </p>
                 </div>
                 <div>
-                    <h4 class="footer-title">Servicios</h4>
+                    <h4 class="footer-title" style="color: white;">Servicios</h4>
                     <ul class="footer-links">
                         <li><a href="geomarketing.html">GeoMarketing</a></li>
                         <li><a href="perfil-empresarial.html">Perfil Empresarial Google</a></li>
                         <li><a href="creacion-sitios.html">Creación de Sitios Web</a></li>
                         <li><a href="hospedaje-web.html">Hospedaje Web</a></li>
-                        <li><a href="marketing-digital.html">Gesti�n de Tr�fico Pago</a></li>
-                        <li><a href="planes-hosting.html">Planes de Hosting</a></li>
+                        <li><a href="marketing-digital.html">Gestión de Tráfico Pago</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Empresa</h4>
+                    <h4 class="footer-title" style="color: white;">Empresa</h4>
                     <ul class="footer-links">
-                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/#contacto">Contacto</a></li>
+                        <li><a href="../nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../index.html#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Contacto</h4>
+                    <h4 class="footer-title" style="color: white;">Contacto</h4>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/595983500802" target="_blank">📱 +595 983 500 802</a></li>
-                        <li><a href="mailto:contacto@puretego.online">✉️ contacto@puretego.online</a></li>
+                        <li><i class="fab fa-whatsapp"></i> +595 983 500 802</li>
+                        <li><i class="far fa-envelope"></i> contacto@puretego.online</li>
                     </ul>
                 </div>
             </div>
@@ -335,15 +453,53 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/595983500802" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-    </a>
+    <!-- Scripts -->
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
 
-    <script src="../js/main.js"></script>
+        // FAQ Interactive
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // Simple Fade-in Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 
 </html>

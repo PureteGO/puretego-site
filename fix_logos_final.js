@@ -22,17 +22,29 @@ const sanitize = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-
 
 let processedLogos = [];
 
+const renameMap = {
+    'LogoHorizontal.png': 'tecnocor.png',
+    'logo_SanCristobal420pcombrillo.png': 'san-cristobal.png',
+    'carnescampo92.png': 'carnes-campo.png' // Optional cleanup
+};
+
 sourceFiles.forEach(file => {
-    // SKIP old logo
+    // SKIP old logos
     if (file === 'carnescampo9.png') return;
 
-    const ext = path.extname(file).toLowerCase();
-    if (validExtensions.includes(ext)) {
-        const nameNoExt = path.basename(file, ext);
+    const originalExt = path.extname(file).toLowerCase();
+
+    // Check if we need to rename the source file virtually
+    let effectiveName = renameMap[file] || file;
+
+    if (validExtensions.includes(path.extname(effectiveName).toLowerCase())) {
+        const ext = path.extname(effectiveName).toLowerCase();
+        const nameNoExt = path.basename(effectiveName, ext);
         const cleanName = sanitize(nameNoExt);
         const finalFilename = `${cleanName}${ext}`;
+
         const destPath = path.join(logosDir, finalFilename);
-        const sourcePath = path.join(logosClientesDir, file);
+        const sourcePath = path.join(logosClientesDir, file); // Read from original filename
 
         try {
             fs.copyFileSync(sourcePath, destPath);
