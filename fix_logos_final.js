@@ -6,13 +6,15 @@ const baseDir = __dirname;
 const logosDir = path.join(baseDir, 'img', 'logos');
 const logosClientesDir = path.join(baseDir, 'logos_clientes');
 
+console.log(`Working in: ${baseDir}`);
+
 // 1. Clean
 if (fs.existsSync(logosDir)) {
     try { fs.rmSync(logosDir, { recursive: true, force: true }); } catch (e) { }
 }
 if (!fs.existsSync(logosDir)) fs.mkdirSync(logosDir);
 
-// 2. Process
+// 2. Process Files
 const sourceFiles = fs.readdirSync(logosClientesDir);
 const validExtensions = ['.png', '.jpg', '.jpeg'];
 
@@ -25,12 +27,11 @@ sourceFiles.forEach(file => {
     if (validExtensions.includes(ext)) {
         const nameNoExt = path.basename(file, ext);
         const cleanName = sanitize(nameNoExt);
-        const finalFilename = `${cleanName}${ext}`; // Keep original extension if copy
+        const finalFilename = `${cleanName}${ext}`;
         const destPath = path.join(logosDir, finalFilename);
         const sourcePath = path.join(logosClientesDir, file);
 
         try {
-            // Just Copy and Rename to Lowercase to fix 404s/Linux issues
             fs.copyFileSync(sourcePath, destPath);
             processedLogos.push(finalFilename);
         } catch (e) {
@@ -40,7 +41,6 @@ sourceFiles.forEach(file => {
 });
 
 // 3. UASS Handling
-// We need to fetch UASS from backup as it's not in logos_clientes
 const uassBackupPath = path.join(baseDir, 'uass_save.png');
 let uassFile = null;
 if (fs.existsSync(uassBackupPath)) {
@@ -52,7 +52,6 @@ if (fs.existsSync(uassBackupPath)) {
 
 // 4. Order
 const uass = uassFile;
-// Find fuzzy matches in normalized names
 const hltuning = processedLogos.find(f => f.includes('hltuning'));
 const motoMorini = processedLogos.find(f => f.includes('morini'));
 
@@ -75,9 +74,8 @@ if (uass) finalOrder.push(uass);
 
 finalOrder = finalOrder.concat(generalDefaults);
 
-// 5. Generate HTML
-let html = '          <div class="ticker-track">\n            <!-- Logos - Batch 1 -->\n';
-
+// 5. Generate HTML (4 Loops)
+let html = '          <div class="ticker-track">\n';
 const generateItem = (filename) => {
     const isUass = filename.includes('uass');
     const className = isUass ? 'logo-item uass-special' : 'logo-item';
@@ -85,10 +83,59 @@ const generateItem = (filename) => {
     return `            <div class="${className}"><img src="img/logos/${filename}" alt="${altName}" loading="lazy" width="150" height="auto"></div>`;
 };
 
+// Loop 1
+html += '            <!-- Logos - Batch 1 -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
-html += '\n            <!-- Duplicação para efeito infinito -->\n';
+// Loop 2
+html += '\n            <!-- Logos - Batch 2 -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
+// Loop 3
+html += '\n            <!-- Logos - Batch 3 -->\n';
+finalOrder.forEach(logo => html += generateItem(logo) + '\n');
+// Loop 4
+html += '\n            <!-- Logos - Batch 4 -->\n';
+finalOrder.forEach(logo => html += generateItem(logo) + '\n');
+
 html += '          </div>';
 
 fs.writeFileSync(path.join(baseDir, 'logo_wall_final.html'), html, 'utf8');
+
+// 6. Update index.html
+const indexHtmlPath = path.join(baseDir, 'index.html');
+let indexContent = fs.readFileSync(indexHtmlPath, 'utf8');
+
+const startMarker = '<div class="ticker-track">';
+// Robust line-based search
+const lines = indexContent.split(/\r?\n/);
+let startLineIdx = -1;
+let endLineIdx = -1;
+
+for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes('class="ticker-track"')) {
+        startLineIdx = i;
+    }
+    // We want the closing div of ticker-track
+    if (startLineIdx !== -1 && i > startLineIdx) {
+        const line = lines[i].trim();
+        // The closing div is likely just </div>.
+        // But how to know it's the ticker-track one? 
+        // We know it is followed by the closing of logo-ticker </div>
+        if (line === '</div>' && lines[i + 1] && lines[i + 1].trim() === '</div>') {
+            endLineIdx = i;
+            break;
+        }
+    }
+}
+
+if (startLineIdx !== -1 && endLineIdx !== -1) {
+    console.log(`Found content at lines ${startLineIdx + 1}-${endLineIdx + 1}`);
+    const pre = lines.slice(0, startLineIdx).join('\n');
+    const post = lines.slice(endLineIdx + 1).join('\n');
+    const newContent = pre + '\n' + html + '\n' + post;
+    fs.writeFileSync(indexHtmlPath, newContent, 'utf8');
+    console.log('index.html updated successfully.');
+} else {
+    console.error(`Block finding failed. Start: ${startLineIdx}, End: ${endLineIdx}`);
+}
+
 console.log('Done.');
