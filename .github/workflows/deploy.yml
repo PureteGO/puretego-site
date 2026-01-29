@@ -22,5 +22,5 @@ jobs:
           set net:max-retries 3;
           set net:timeout 30;
           open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --exclude .git --exclude .github ./ /public_html/;
+          mirror --reverse --delete --verbose --exclude .git --exclude .github --exclude central/ ./ /public_html/;
           "
