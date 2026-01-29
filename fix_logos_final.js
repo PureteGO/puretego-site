@@ -23,6 +23,9 @@ const sanitize = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-
 let processedLogos = [];
 
 sourceFiles.forEach(file => {
+    // SKIP old logo
+    if (file === 'carnescampo9.png') return;
+
     const ext = path.extname(file).toLowerCase();
     if (validExtensions.includes(ext)) {
         const nameNoExt = path.basename(file, ext);
@@ -52,6 +55,7 @@ if (fs.existsSync(uassBackupPath)) {
 
 // 4. Order
 const uass = uassFile;
+// Fuzzy match since we lowercased everything
 const hltuning = processedLogos.find(f => f.includes('hltuning'));
 const motoMorini = processedLogos.find(f => f.includes('morini'));
 
@@ -74,7 +78,9 @@ if (uass) finalOrder.push(uass);
 
 finalOrder = finalOrder.concat(generalDefaults);
 
-// 5. Generate HTML (4 Loops)
+// 5. Generate HTML (2 Loops: Original + Copy)
+// User asked: "construa a fila ... e coloque uma nova cópia ... ao final"
+// Assuming standard infinite scroll needs 2 sets. If they want "more fluidity", ensuring 2 full sets is standard.
 let html = '          <div class="ticker-track">\n';
 const generateItem = (filename) => {
     const isUass = filename.includes('uass');
@@ -83,17 +89,11 @@ const generateItem = (filename) => {
     return `            <div class="${className}"><img src="img/logos/${filename}" alt="${altName}" loading="lazy" width="150" height="auto"></div>`;
 };
 
-// Loop 1
+// Loop 1 (Original)
 html += '            <!-- Logos - Batch 1 -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
-// Loop 2
-html += '\n            <!-- Logos - Batch 2 -->\n';
-finalOrder.forEach(logo => html += generateItem(logo) + '\n');
-// Loop 3
-html += '\n            <!-- Logos - Batch 3 -->\n';
-finalOrder.forEach(logo => html += generateItem(logo) + '\n');
-// Loop 4
-html += '\n            <!-- Logos - Batch 4 -->\n';
+// Loop 2 (Copy)
+html += '\n            <!-- Logos - Batch 2 (Copy) -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
 
 html += '          </div>';
@@ -104,7 +104,6 @@ fs.writeFileSync(path.join(baseDir, 'logo_wall_final.html'), html, 'utf8');
 const indexHtmlPath = path.join(baseDir, 'index.html');
 let indexContent = fs.readFileSync(indexHtmlPath, 'utf8');
 
-const startMarker = '<div class="ticker-track">';
 // Robust line-based search
 const lines = indexContent.split(/\r?\n/);
 let startLineIdx = -1;
@@ -117,9 +116,8 @@ for (let i = 0; i < lines.length; i++) {
     // We want the closing div of ticker-track
     if (startLineIdx !== -1 && i > startLineIdx) {
         const line = lines[i].trim();
-        // The closing div is likely just </div>.
-        // But how to know it's the ticker-track one? 
-        // We know it is followed by the closing of logo-ticker </div>
+        // The closing div of ticker-track is inside logo-ticker
+        // We look for </div> followed by another </div> (closing logo-ticker)
         if (line === '</div>' && lines[i + 1] && lines[i + 1].trim() === '</div>') {
             endLineIdx = i;
             break;
