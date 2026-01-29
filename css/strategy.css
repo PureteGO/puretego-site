@@ -463,14 +463,13 @@
 .logo-item img {
     height: 50px;
     width: auto;
-    filter: brightness(0) invert(1) opacity(0.6);
-    /* All clean white */
+    filter: none;
+    opacity: 1;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Hover reveal individual logo beauty */
 .logo-item:hover img {
-    filter: brightness(1) invert(0) opacity(1);
     transform: scale(1.15);
 }
 

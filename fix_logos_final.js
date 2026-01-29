@@ -78,9 +78,7 @@ if (uass) finalOrder.push(uass);
 
 finalOrder = finalOrder.concat(generalDefaults);
 
-// 5. Generate HTML (2 Loops: Original + Copy)
-// User asked: "construa a fila ... e coloque uma nova cópia ... ao final"
-// Assuming standard infinite scroll needs 2 sets. If they want "more fluidity", ensuring 2 full sets is standard.
+// 5. Generate HTML (3 Loops: Original + Copy 1 + Copy 2)
 let html = '          <div class="ticker-track">\n';
 const generateItem = (filename) => {
     const isUass = filename.includes('uass');
@@ -89,11 +87,14 @@ const generateItem = (filename) => {
     return `            <div class="${className}"><img src="img/logos/${filename}" alt="${altName}" loading="lazy" width="150" height="auto"></div>`;
 };
 
-// Loop 1 (Original)
+// Loop 1
 html += '            <!-- Logos - Batch 1 -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
-// Loop 2 (Copy)
-html += '\n            <!-- Logos - Batch 2 (Copy) -->\n';
+// Loop 2
+html += '\n            <!-- Logos - Batch 2 -->\n';
+finalOrder.forEach(logo => html += generateItem(logo) + '\n');
+// Loop 3
+html += '\n            <!-- Logos - Batch 3 -->\n';
 finalOrder.forEach(logo => html += generateItem(logo) + '\n');
 
 html += '          </div>';
