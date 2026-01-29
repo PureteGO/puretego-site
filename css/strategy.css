@@ -435,11 +435,15 @@
 .ticker-track {
     display: flex;
     gap: var(--space-16);
-    animation: ticker linear infinite 40s;
+    animation: ticker linear infinite 60s;
+    /* Slower for 3 batches */
     white-space: nowrap;
     padding: 0;
+    padding-right: var(--space-16);
+    /* Compensate missing final gap */
     margin: 0;
     list-style: none;
+    width: max-content;
 }
 
 @keyframes ticker {
@@ -448,7 +452,8 @@
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-33.33333%);
+        /* Move exactly 1/3 (one batch) */
     }
 }
 
