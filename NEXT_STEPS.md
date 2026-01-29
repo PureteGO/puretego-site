@@ -24,7 +24,8 @@
 - [ ] **Google Analytics**: Verificar se o script GA4 (G-Q84QCMPH42) está coletando dados corretamente no painel do Google Analytics
 - [ ] **Google Search Console**: Enviar o sitemap (`/sitemap.xml`) e solicitar a indexação das novas páginas
 - [x] **Novo Artigo Blog**: Criado artigo detalhando o funil de "Intenção vs Entretenimento" com os números reais (+270k oportunidades / +35k clientes no local). Localizado em `/blog/articulos/intencion-vs-entretenimiento-estrategia-ganadora.html`.
-- [ ] **Deploy**: Fazer upload das alterações para o servidor de produção
+- [x] **Deploy**: Upload realizado via GitHub Actions com sucesso (Run #16/17 excluindo pasta 'central')
+- [x] **Otimização de Performance**: Imagens pesadas convertidas para WebP e Favicon redimensionado para <15KB.
 - [ ] **Teste de E-mail (Pós-Deploy)**: Configurar PHPMailer com as credenciais reais do cPanel e validar recebimento
 
 ## 📝 Notas Técnicas
