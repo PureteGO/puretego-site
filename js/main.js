@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollUp();
   initConsultationModal();
   initAuditoriaModal();
+  initPlanModals();
   handleSuccessMessage();
   initHeroSlideshow();
   initCounters();
@@ -349,4 +350,43 @@ function handleSuccessMessage() {
     alert('¡Gracias! Su solicitud ha sido enviada exitosamente.');
     window.history.replaceState({}, '', window.location.pathname);
   }
+}
+
+/* ===== Plan Details Modal Logic ===== */
+function initPlanModals() {
+  const modals = document.querySelectorAll('.modal-plan');
+  const btnsOpen = document.querySelectorAll('.btn-details');
+  const btnsClose = document.querySelectorAll('.modal-close-plan');
+
+  if (!btnsOpen.length) return;
+
+  btnsOpen.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const planId = this.getAttribute('data-plan-target');
+      const modal = document.getElementById(planId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeModal(modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  btnsClose.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const modal = this.closest('.modal-plan');
+      closeModal(modal);
+    });
+  });
+
+  modals.forEach(modal => {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal(modal);
+    });
+  });
 }
