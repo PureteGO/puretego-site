@@ -193,11 +193,23 @@
                 <a href="/" class="logo"><img src="../../img/logo.png" alt="PureteGO" width="180" height="40"></a>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="/" class="nav-link">Inicio</a></li>
-                        <li><a href="/#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="/nosotros.html" class="nav-link">Nosotros</a></li>
-                        <li><a href="/blog/" class="nav-link">Blog</a></li>
-                        <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+                        <li><a href="../../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="../../servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="../../servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="../../servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="../../servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="../../servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../../contacto.html" class="nav-link">Contacto</a></li>
                     </ul>
                     <a href="https://wa.me/595983500802" class="btn btn-primary" target="_blank">Consultoría Gratis</a>
                     <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
@@ -330,19 +342,54 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="../../img/logo.png" alt="PureteGO" width="180" height="40">
-                    <p>Marketing de Autoridad para Empresas que Venden.</p>
+                    <a href="../../index.html">
+                        <img src="../../img/logo.png" alt="PureteGO - Marketing Digital Paraguay" width="180"
+                            height="40">
+                    </a>
+                    <p>Somos una agencia de marketing digital multinacional con presencia en Paraguay y Brasil.
+                        Especialistas en GeoMarketing, SEO Local y soluciones digitales para negocios locales.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../servicios/geomarketing.html">GeoMarketing</a></li>
+                        <li><a href="../../servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
+                        <li><a href="../../servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
+                        <li><a href="../../servicios/hospedaje-web.html">Hospedaje Web</a></li>
+                        <li><a href="../../servicios/marketing-digital.html">Gestión de Tráfico Pago</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="../index.html">Blog</a></li>
+                        <li><a href="../../contacto.html">Contacto</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4 class="footer-title">Contacto</h4>
                     <ul class="footer-links">
-                        <li>📍 San Lorenzo, Paraguay</li>
-                        <li>📱 +595 983 500 802</li>
+                        <li>
+                            <a href="mailto:contacto@puretego.online">
+                                ✉️ contacto@puretego.online
+                            </a>
+                        </li>
+                        <li>📍 Nepal casi Valencia, Barrio San Luis<br>San Lorenzo, Paraguay</li>
+                        <li>🌎 Paraguay & Brasil</li>
                     </ul>
                 </div>
             </div>
+
+            <div class="footer-badges">
+                <img src="../../img/google-partner.png" alt="Google Partner" class="footer-google-badge" loading="lazy">
+                <img src="../../img/google-street-view-trusted.jpg" alt="Google Street View Trusted Photographer"
+                    class="footer-google-badge" loading="lazy">
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 PureteGO. Todos los derechos reservados.</p>
+                <div id="daily-verse" class="daily-verse"></div>
             </div>
         </div>
     </footer>

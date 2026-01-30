@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q84QCMPH42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q84QCMPH42');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | PureteGO - Agencia de Marketing Digital Premium</title>
+    <meta name="description"
+        content="Contáctanos para una consultoría gratuita. Estamos listos para llevar tu negocio al siguiente nivel con estrategias de GeoMarketing y SEO Local en Paraguay y Brasil.">
+    <meta name="keywords"
+        content="contacto puretego, marketing digital paraguay, seo local asuncion, consultoria marketing">
+    <link rel="canonical" href="https://www.puretego.online/contacto.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        .contact-hero {
+            padding: 160px 0 80px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            position: sticky;
+            top: 120px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--color-secondary);
+        }
+
+        .info-content p,
+        .info-content a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-content a:hover {
+            color: var(--color-primary);
+        }
+
+        .contact-form-container {
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-container {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #f8fafc;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(1, 167, 238, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            font-size: 0.9rem;
+        }
+
+        .map-section {
+            margin-top: 6rem;
+            height: 450px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .social-large {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link-large {
+            width: 450px;
+            height: 450px;
+        }
+
+        .contact-social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-secondary);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .contact-social-btn:hover {
+            background: var(--color-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="PureteGO" width="180" height="40"></a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                        <li class="mobile-only"><button class="btn btn-primary btn-consultoria-mobile">Consultoría
+                                Gratis</button></li>
+                    </ul>
+                    <button class="btn btn-primary btn-consultoria-mobile desktop-only">Consultoría Gratis</button>
+                    <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-text fade-in">
+                <h1 class="text-white">HABLEMOS DE TU <span class="text-gradient">PRÓXIMO SALTO</span></h1>
+                <p class="hero-subtitle">
+                    Estamos aquí para resolver tus dudas y diseñar la estrategia que tu negocio necesita para dominar el
+                    mercado local.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-column fade-in">
+                    <div class="contact-info-card">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-content">
+                                <h3>Nuestra Oficina</h3>
+                                <p>Nepal casi Valencia, Barrio San Luis<br>San Lorenzo, Paraguay</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="info-content">
+                                <h3>WhatsApp Business</h3>
+                                <a href="https://wa.me/595983500802" target="_blank">+595 983 500 802</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="far fa-envelope"></i></div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <a href="mailto:contacto@puretego.online">contacto@puretego.online</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="far fa-clock"></i></div>
+                            <div class="info-content">
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 08:00 - 18:00</p>
+                            </div>
+                        </div>
+
+                        <div class="social-large">
+                            <a href="https://facebook.com/puretego" class="contact-social-btn" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/puretegoonline" class="contact-social-btn" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/@PureteGOOnline" class="contact-social-btn" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-column fade-in">
+                    <div class="contact-form-container">
+                        <h2 style="margin-bottom: 2rem; font-size: 2rem;">Envíanos un <span
+                                class="text-gradient">Mensaje</span></h2>
+                        <form id="contactPageForm" action="php/send-mail.php" method="POST">
+                            <input type="hidden" name="form_type" value="Página de Contacto">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control"
+                                        placeholder="Ej: Juan Pérez" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="empresa">Nombre de tu Empresa</label>
+                                    <input type="text" id="empresa" name="empresa" class="form-control"
+                                        placeholder="Ej: Bazar San José">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefono">WhatsApp / Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" class="form-control"
+                                        placeholder="Ej: +595 981 123 456" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="Ej: juan@empresa.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">¿En qué podemos ayudarte?</label>
+                                <select id="asunto" name="asunto" class="form-control">
+                                    <option value="consultoria">Consultoría Gratis</option>
+                                    <option value="geomarketing">GeoMarketing y SEO Local</option>
+                                    <option value="web">Creación de Sitios Web</option>
+                                    <option value="trafico">Gestión de Tráfico Pago</option>
+                                    <option value="otros">Otros Asuntos</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" class="form-control" rows="5"
+                                    placeholder="Cuéntanos un poco más sobre tu proyecto..." required></textarea>
+                            </div>
+
+                            <!-- reCAPTCHA Placeholder -->
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                <!-- Clave de prueba de Google -->
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-full"
+                                style="width: 100%; justify-content: center;">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1803.1167448243166!2d-57.5113888!3d-25.3374999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da9b79872e42b%3A0xe674092b3c2b8344!2sNepal%20casi%20Valencia%2C%20San%20Lorenzo!5e0!3m2!1ses!2spy!4v1706600000000!5m2!1ses!2spy"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="PureteGO - Marketing Digital Paraguay" width="180" height="40">
+                    </a>
+                    <p>Somos una agencia de marketing digital multinacional con presencia en Paraguay y Brasil.
+                        Especialistas en GeoMarketing, SEO Local y soluciones digitales para negocios locales.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="servicios/geomarketing.html">GeoMarketing</a></li>
+                        <li><a href="servicios/perfil-empresarial.html">Perfil Empresarial Google</a></li>
+                        <li><a href="servicios/creacion-sitios.html">Creación de Sitios Web</a></li>
+                        <li><a href="servicios/hospedaje-web.html">Hospedaje Web</a></li>
+                        <li><a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:contacto@puretego.online">
+                                ✉️ contacto@puretego.online
+                            </a>
+                        </li>
+                        <li>📍 Nepal casi Valencia, Barrio San Luis<br>San Lorenzo, Paraguay</li>
+                        <li>🌎 Paraguay & Brasil</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-badges">
+                <img src="img/google-partner.png" alt="Google Partner" class="footer-google-badge" loading="lazy">
+                <img src="img/google-street-view-trusted.jpg" alt="Google Street View Trusted Photographer"
+                    class="footer-google-badge" loading="lazy">
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 PureteGO. Todos los derechos reservados.</p>
+                <div id="daily-verse" class="daily-verse"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Specific logic for the contact form to handle success
+        document.getElementById('contactPageForm')?.addEventListener('submit', function (e) {
+            // Note: In production, the button would be disabled until reCAPTCHA is solved
+            // or validation is performed.
+            // main.js will handle the submission if we add it to its logic, 
+            // but for now let's let send-mail.php handle it and redirect back with ?consultoria=success
+        });
+    </script>
+</body>
+
+</html>

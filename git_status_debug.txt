@@ -1,0 +1,34 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   NEXT_STEPS.md
+	modified:   blog/articulos/como-aparecer-primeras-posiciones-google.html
+	modified:   blog/articulos/diferencias-sitio-amateur-profesional.html
+	modified:   blog/articulos/geomarketing-vender-mas-zona.html
+	modified:   blog/articulos/guia-google-mi-negocio.html
+	modified:   blog/articulos/guia-google-my-business-2026.html
+	modified:   blog/articulos/intencion-vs-entretenimiento-estrategia-ganadora.html
+	modified:   blog/articulos/seo-local-por-que-tu-negocio-necesita.html
+	modified:   blog/index.html
+	deleted:    capavideosmartphone.png
+	deleted:    git_status_new.txt
+	deleted:    git_status_output.txt
+	modified:   index.html
+	deleted:    mockupvideosmartphone.png
+	modified:   nosotros.html
+	modified:   servicios/creacion-sitios.html
+	modified:   servicios/geomarketing.html
+	modified:   servicios/hospedaje-web.html
+	modified:   servicios/marketing-digital.html
+	modified:   servicios/perfil-empresarial.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	contacto.html
+	git_status_debug.txt
+	mockuptransparente.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
