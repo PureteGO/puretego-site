@@ -940,10 +940,12 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
+  /* Reduced gap slightly for better mobile fit */
   padding: var(--space-8) 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: var(--space-6);
+  flex-wrap: wrap;
 }
 
 .footer-google-badge {
