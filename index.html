@@ -171,8 +171,10 @@
             <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
             <li><a href="blog/index.html" class="nav-link">Blog</a></li>
             <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <li class="mobile-only"><button class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</button>
+            </li>
           </ul>
-          <button id="btnConsultoria" class="btn btn-primary">
+          <button id="btnConsultoria" class="btn btn-primary desktop-only">
             Consultoría Gratis
           </button>
           <button class="menu-toggle" aria-label="Menú">
@@ -225,7 +227,50 @@
     </div>
   </section>
 
-  <!-- Premium Services Section (Authority Focus) -->
+  </section>
+
+  <!-- Smartphone Video Showcase Section -->
+  <section class="section section-dark smartphone-showcase">
+    <div class="container">
+      <div class="showcase-flex">
+
+        <!-- Text Content -->
+        <div class="fade-in showcase-text">
+          <h2>
+            Descubre el Poder del <span class="text-gradient">Marketing Local</span>
+          </h2>
+          <p>
+            Mira cómo transformamos negocios comunes en referentes de su zona. Estrategias probadas, resultados medibles
+            y crecimiento constante.
+          </p>
+          <div class="showcase-cta">
+            <div class="showcase-cta-inner">
+              <div class="play-icon">
+                <i class="fas fa-play"></i>
+              </div>
+              <span>Ver caso de éxito</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup with Video -->
+        <div class="fade-in phone-mockup-container">
+          <!-- Phone Frame Image -->
+          <img src="img/smartphone_frame_mockup.png" alt="Smartphone Frame" class="phone-frame">
+
+          <!-- Video Inside Frame -->
+          <div class="phone-video-content">
+            <video autoplay muted loop playsinline>
+              <source src="img/PureteGONegocioLocal.mp4" type="video/mp4">
+              Tu navegador no soporta videos HTML5.
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="servicios" class="section">
     <div class="container">
       <div class="section-header fade-in">
@@ -558,73 +603,136 @@
         <div class="logo-ticker">
           <div class="ticker-track">
             <!-- Batch 1 -->
-            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA"
+                loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200"
+                height="auto"></div>
 
             <!-- Batch 2 -->
-            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA"
+                loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200"
+                height="auto"></div>
 
             <!-- Batch 3 -->
-            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy" width="200" height="auto"></div>
-            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/alusiza.png" alt="ALUSIZA" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/aguacerrocora.png" alt="AGUACERROCORA" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/hltuning.png" alt="HLTUNING" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/motomorini.png" alt="MOTOMORINI" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/coliseo.png" alt="COLISEO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/dashfit.png" alt="DASHFIT" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/jvtuberias.png" alt="JVTUBERIAS" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carlaomartelinho.png" alt="CARLAOMARTELINHO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/medamsrl.png" alt="MEDAMSRL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/mimolocacoes.png" alt="MIMOLOCACOES" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/nutrivital.png" alt="NUTRIVITAL" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/logo1870.png" alt="LOGO1870" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/san-cristobal.png" alt="SAN CRISTOBAL" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/tecnocor.png" alt="TECNOCOR" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/veterinariaflorida.png" alt="VETERINARIAFLORIDA"
+                loading="lazy" width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/cess.png" alt="CESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/logo-butique.png" alt="LOGO BUTIQUE" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/kess.png" alt="KESS" loading="lazy" width="200" height="auto">
+            </div>
+            <div class="logo-item"><img src="img/clientes/soundpro.png" alt="SOUNDPRO" loading="lazy" width="200"
+                height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carnes-campo.png" alt="CARNES CAMPO" loading="lazy"
+                width="200" height="auto"></div>
+            <div class="logo-item"><img src="img/clientes/carshow.png" alt="CARSHOW" loading="lazy" width="200"
+                height="auto"></div>
 
           </div>
         </div>
@@ -680,7 +788,7 @@
       </div>
 
       <div class="text-center mt-8">
-        <a href="blog/" class="btn btn-secondary">Ver todos los artículos</a>
+        <a href="blog/index.html" class="btn btn-secondary">Ver todos los artículos</a>
       </div>
     </div>
   </section>
@@ -730,9 +838,10 @@
         <div>
           <h4 class="footer-title">Contacto</h4>
           <ul class="footer-links">
-            <a href="mailto:contacto@puretego.online">
-              ✉️ contacto@puretego.online
-            </a>
+            <li>
+              <a href="mailto:contacto@puretego.online">
+                ✉️ contacto@puretego.online
+              </a>
             </li>
             <li>📍 Nepal casi Valencia, Barrio San Luis<br>San Lorenzo, Paraguay</li>
             <li>🌎 Paraguay & Brasil</li>

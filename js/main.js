@@ -253,7 +253,8 @@ function initConsultationModal() {
   const btnsOpen = [
     document.getElementById('btnConsultoria'),
     document.getElementById('btnHeroConsultoria'),
-    document.getElementById('btnCTA')
+    document.getElementById('btnCTA'),
+    ...document.querySelectorAll('.btn-consultoria-mobile')
   ];
   const btnClose = document.querySelector('.modal-close-consultoria');
   const btnCancel = document.getElementById('btnCancelar');

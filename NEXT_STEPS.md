@@ -10,12 +10,12 @@
 
 ## 📋 Pendências Próxima Sessão (Concluir SEO e Analytics)
 
-- [ ] **Finalizar Páginas Internas**: Aplicar design premium e revisar conteúdo das páginas de serviços:
-    - GeoMarketing
-    - Perfil Empresarial Google
+- [ ] **Página de Contacto**: Criar formulário funcional com reCAPTCHA enviando para `contacto@puretego.online` (Adicionado por solicitação).
+- [ ] **Finalizar Páginas Internas**: Revisar detalhes visuais finais em:
+    - GeoMarketing (Imagens ok, Modais ok)
+    - Perfil Empresarial Google (Grid de planos ok)
     - Creación de Sitios Web
     - Marketing Digital
-- [ ] **Estratégia de Pacotes**: Definir e implementar a inserção dos planos **Start2GO**, **Biz2GO**, **Pro2GO**, etc.
 - [ ] **Google Analytics**: Verificar se o script GA4 (G-Q84QCMPH42) está coletando dados no painel.
 - [ ] **Teste de E-mail**: Validar funcionamento do PHPMailer no ambiente de produção.
 
