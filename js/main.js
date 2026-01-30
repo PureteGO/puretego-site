@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   handleSuccessMessage();
   initHeroSlideshow();
   initCounters();
+  initVideoControls();
 });
 
 /* ===== Hero Dynamic Slideshow ===== */
@@ -390,4 +391,53 @@ function initPlanModals() {
       if (e.target === modal) closeModal(modal);
     });
   });
+}
+
+/* ===== Video Success Controls Logic ===== */
+function initVideoControls() {
+  const video = document.getElementById('successVideo');
+  const playBtn = document.getElementById('videoPlayBtn');
+  const muteBtn = document.getElementById('videoMuteBtn');
+  const wrapper = document.querySelector('.success-video-wrapper');
+
+  if (!video || !playBtn || !muteBtn || !wrapper) return;
+
+  function updateMuteIcon() {
+    muteBtn.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+  }
+
+  function updatePlayIcon() {
+    playBtn.innerHTML = video.paused ? '<i class="fas fa-play"></i>' : '<i class="fas fa-pause"></i>';
+  }
+
+  muteBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    video.muted = !video.muted;
+    updateMuteIcon();
+  });
+
+  playBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  wrapper.addEventListener('click', function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener('play', updatePlayIcon);
+  video.addEventListener('pause', updatePlayIcon);
+  video.addEventListener('volumechange', updateMuteIcon);
+
+  // Inicializar iconos
+  updateMuteIcon();
+  updatePlayIcon();
 }

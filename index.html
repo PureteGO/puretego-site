@@ -384,9 +384,18 @@
           <div class="success-mockup-container">
             <img src="img/mockuptransparente.png" alt="Caso de éxito" class="success-mockup-frame">
             <div class="success-video-wrapper">
-              <video autoplay muted loop playsinline poster="img/capavideosmartphone.png" class="success-video-element">
+              <video id="successVideo" autoplay muted loop playsinline poster="img/capavideosmartphone.png"
+                class="success-video-element">
                 <source src="img/PureteGONegocioLocal.mp4" type="video/mp4">
               </video>
+              <div class="video-controls-overlay">
+                <button id="videoPlayBtn" class="video-control-btn btn-play" aria-label="Reproducir/Pausar">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button id="videoMuteBtn" class="video-control-btn btn-mute" aria-label="Activar/Desactivar sonido">
+                  <i class="fas fa-volume-mute"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
