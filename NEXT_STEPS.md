@@ -9,6 +9,8 @@
 - [x] **Estandarización de Páginas**: Cabeceras y pies de página unificados en todos los servicios y artículos del blog.
 - [x] **Favicon**: Creado favicon.ico en la raíz del proyecto.
 - [x] **Validar Blog**: Todos los links internos del blog y artículos están funcionando con rutas relativas correctas.
+- [x] **Video Smartphone**: Mockup actualizado (Mockup2.png), controles UI mejorados (SVG) y alineación perfecta corregida.
+- [x] **Google Badges**: Arreglados enlaces rotos (AI, Developer) moviendo imágenes a carpeta `img/`.
 
 - [ ] **Google Analytics**: Verificar se o script GA4 (G-Q84QCMPH42) está coletando dados no painel.
 - [ ] **Teste de E-mail**: Validar funcionamento do PHPMailer no ambiente de produção.
