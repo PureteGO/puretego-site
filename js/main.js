@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initHeroSlideshow();
   initCounters();
   initVideoControls();
+  initContactPageForm();
 });
 
 /* ===== Hero Dynamic Slideshow ===== */
