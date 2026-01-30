@@ -17,6 +17,39 @@ use PHPMailer\PHPMailer\SMTP;
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // --- VERIFICAÇÃO RECAPTCHA ---
+    $recaptcha_secret = '6Le_aFssAAAAAMaIJMy1nKrYp6sGqDyczvC0TgrA'; // Secret Key fornecida
+    $recaptcha_response = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : null;
+
+    // Solo verificar si se envió el token (para evitar bloqueo total si el JS falla en cargar, aunque es recomendado forzarlo)
+    if ($recaptcha_response) {
+        $verify_url = "https://www.google.com/recaptcha/api/siteverify";
+        $data = [
+            'secret' => $recaptcha_secret,
+            'response' => $recaptcha_response,
+            'remoteip' => $_SERVER['REMOTE_ADDR']
+        ];
+        
+        $options = [
+            'http' => [
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+        
+        $context = stream_context_create($options);
+        $verify_result = file_get_contents($verify_url, false, $context);
+        $json_result = json_decode($verify_result);
+        
+        if (!$json_result->success) {
+            http_response_code(400);
+            echo json_encode(["status" => "error", "message" => "Falha na verificação de robô (reCAPTCHA)."]);
+            exit;
+        }
+    }
+
     $mail = new PHPMailer(true);
 
     try {
