@@ -995,15 +995,20 @@ h6 {
 
 .success-video-wrapper {
   position: absolute;
-  top: 1.5%;
-  left: 3.5%;
-  width: 93%;
-  height: 97%;
-  z-index: 5;
-  border-radius: 54px;
+  top: 2%;
+  /* Adjusted to sit inside frame */
+  left: 4%;
+  width: 92%;
+  height: 96%;
+  z-index: 12;
+  /* Now ON TOP of the frame to ensure visibility if frame is opaque */
+  border-radius: 45px;
+  /* Slightly tighter radius */
   overflow: hidden;
   background: #000;
   cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  /* Hide edges */
 }
 
 .video-controls-panel {
@@ -1011,11 +1016,11 @@ h6 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+  /* Darker for contrast */
   backdrop-filter: blur(8px);
   padding: 15px 20px;
   z-index: 20;
-  /* Higher than mockup frame (10) */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1061,7 +1066,7 @@ h6 {
 .video-btn {
   background: none;
   border: none;
-  color: white;
+  color: white !important;
   font-size: 1rem;
   cursor: pointer;
   padding: 5px;
@@ -1524,16 +1529,16 @@ h6 {
   }
 
   .whatsapp-float {
-    bottom: 80px;
-    /* Adjusted for sticky bar */
+    bottom: 100px;
+    /* Moved up to clear sticky bar */
     right: 20px;
     width: 55px;
     height: 55px;
   }
 
   .scroll-up.show {
-    bottom: 145px;
-    /* Adjusted for sticky bar and WA float */
+    bottom: 165px;
+    /* Moved up correspondingly */
   }
 
   .section {
