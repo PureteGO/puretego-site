@@ -397,7 +397,10 @@ function initPlanModals() {
 function initVideoControls() {
   const video = document.getElementById('successVideo');
   const playBtn = document.getElementById('videoPlayBtn');
+  const stopBtn = document.getElementById('videoStopBtn');
   const muteBtn = document.getElementById('videoMuteBtn');
+  const progressBar = document.getElementById('videoProgressBar');
+  const progressContainer = document.querySelector('.video-progress-container');
   const wrapper = document.querySelector('.success-video-wrapper');
 
   if (!video || !playBtn || !muteBtn || !wrapper) return;
@@ -408,6 +411,18 @@ function initVideoControls() {
 
   function updatePlayIcon() {
     playBtn.innerHTML = video.paused ? '<i class="fas fa-play"></i>' : '<i class="fas fa-pause"></i>';
+  }
+
+  function updateProgress() {
+    const percentage = (video.currentTime / video.duration) * 100;
+    if (progressBar) progressBar.style.width = percentage + '%';
+  }
+
+  function setProgress(e) {
+    const width = progressContainer.clientWidth;
+    const clickX = e.offsetX;
+    const duration = video.duration;
+    video.currentTime = (clickX / width) * duration;
   }
 
   muteBtn.addEventListener('click', function (e) {
@@ -425,6 +440,22 @@ function initVideoControls() {
     }
   });
 
+  if (stopBtn) {
+    stopBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      video.pause();
+      video.currentTime = 0;
+      updatePlayIcon();
+    });
+  }
+
+  if (progressContainer) {
+    progressContainer.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setProgress(e);
+    });
+  }
+
   wrapper.addEventListener('click', function () {
     if (video.paused) {
       video.play();
@@ -436,6 +467,7 @@ function initVideoControls() {
   video.addEventListener('play', updatePlayIcon);
   video.addEventListener('pause', updatePlayIcon);
   video.addEventListener('volumechange', updateMuteIcon);
+  video.addEventListener('timeupdate', updateProgress);
 
   // Inicializar iconos
   updateMuteIcon();
