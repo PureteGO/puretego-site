@@ -15,6 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- SEO Meta Tags -->
     <title>Diseño y Creación de Sitios Web Premium | PureteGO Paraguay</title>
     <meta name="description"
@@ -85,43 +88,100 @@
             border-radius: 40px;
             margin: 60px 0;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Glassmorphism Background Decoration */
+        .pricing-section-inner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(1, 167, 238, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .package-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 3rem 2rem;
             border-radius: 24px;
             text-align: center;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .package-card.featured {
-            background: rgba(1, 167, 238, 0.1);
-            border-color: var(--color-primary);
-            transform: scale(1.05);
+        .package-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
 
-        .package-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 1.5rem 0;
-            font-family: var(--font-display);
+        .package-card h3 {
+            color: white !important;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .package-features {
-            text-align: left;
-            margin: 2rem 0;
-            list-style: none;
-            padding: 0;
+        .package-card p {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .package-card .package-price {
+            color: white !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .package-features li {
-            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .package-features i {
+            color: var(--color-primary);
+        }
+
+        /* 3-2 Layout Grid System */
+        .pricing-row-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-row-2 {
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pricing-row-2 .package-card-wrapper {
+            flex: 0 1 350px;
+            max-width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            .pricing-row-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-row-2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-row-2 .package-card-wrapper {
+                width: 100%;
+                flex: none;
+            }
         }
     </style>
 </head>
@@ -176,13 +236,16 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1 class="text-white">DISEÑO WEB QUE <span class="text-gradient">VENDE</span></h1>
+                    <h1 class="text-white">MÁS QUE UN SITIO WEB, TU <span class="text-gradient">MEJOR VENDEDOR
+                            24/7</span></h1>
                     <p class="hero-subtitle">
-                        No creamos solo páginas, construimos activos digitales de alto rendimiento. Sitios rápidos,
-                        seguros y optimizados para convertir cada visita en un cliente potencial.
+                        Deja de perder clientes por una web lenta o confusa. Creamos activos digitales de Alto
+                        Rendimiento: carga en &lt;1s, diseño persuasivo y SEO nativo para dominar tu mercado.
                     </p>
                     <div class="hero-buttons">
                         <a href="../contacto.html" class="btn btn-primary btn-lg">Solicitar Presupuesto</a>
+                        <a href="#precios" class="btn btn-secondary btn-lg"
+                            style="color: white; border-color: rgba(255,255,255,0.3)">Ver Planes</a>
                     </div>
                 </div>
                 <div class="hero-image slide-in-right">
@@ -204,20 +267,21 @@
             <div class="services-grid">
                 <div class="web-feature-card fade-in">
                     <i class="fas fa-gauge-high"></i>
-                    <h3>Velocidad Extrema</h3>
-                    <p>Carga en menos de 2 segundos. La velocidad es el factor #1 para retener clientes y mejorar el
-                        SEO.</p>
+                    <h3>Velocidad que Retiene</h3>
+                    <p>Tus clientes no esperan. Optimizamos cada línea de código para cargar en milisegundos, reduciendo
+                        el rebote y enamorando a Google.</p>
                 </div>
                 <div class="web-feature-card fade-in">
                     <i class="fas fa-mobile-screen-button"></i>
-                    <h3>Mobile First</h3>
-                    <p>Diseñamos pensando primero en el celular, donde ocurre el 80% del tráfico en Paraguay.</p>
+                    <h3>Captura al 80% Móvil</h3>
+                    <p>La mayoría te visitará desde un celular. Diseñamos experiencias "thumb-friendly" que facilitan la
+                        compra con un solo dedo.</p>
                 </div>
                 <div class="web-feature-card fade-in">
                     <i class="fas fa-magnifying-glass-chart"></i>
-                    <h3>SEO Integrado</h3>
-                    <p>Tu sitio nace optimizado técnicamente para pelear los primeros puestos de Google desde el día 1.
-                    </p>
+                    <h3>Ingeniería de Conversión</h3>
+                    <p>No es solo "bonito". Usamos psicología de ventas y estructuras probadas para guiar al visitante
+                        hacia el botón de compra.</p>
                 </div>
             </div>
         </div>
@@ -233,83 +297,97 @@
 
             <div class="pricing-section-inner">
                 <div class="container">
-                    <div class="services-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-                        <div class="package-card fade-in">
-                            <h3>Start2GO</h3>
-                            <p style="color: rgba(255,255,255,0.7);">Landing Page de Ventas</p>
-                            <div class="package-price">1.800.000 <span>Gs.</span></div>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check"></i> Diseño High-Conversion</li>
-                                <li><i class="fas fa-check"></i> WhatsApp Directo</li>
-                                <li><i class="fas fa-check"></i> Mobile First Design</li>
-                                <li><i class="fas fa-check"></i> Hosting + SSL (1 año)</li>
-                            </ul>
-                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Start2GO%20de%20Sitios."
-                                class="btn btn-secondary" style="color: white; border-color: white; width: 100%;">Elegir
-                                Plan</a>
+                    <!-- Grid Layout 3 Top, 2 Bottom -->
+                    <div class="pricing-container-custom">
+
+                        <!-- ROW 1: The 3 Core Plans -->
+                        <div class="pricing-row-3">
+                            <div class="package-card fade-in">
+                                <h3>Start2GO</h3>
+                                <p>Landing Page de Ventas</p>
+                                <div class="package-price">1.800.000 <span>Gs.</span></div>
+                                <ul class="package-features">
+                                    <li><i class="fas fa-check"></i> Diseño High-Conversion</li>
+                                    <li><i class="fas fa-check"></i> WhatsApp Directo</li>
+                                    <li><i class="fas fa-check"></i> Mobile First Design</li>
+                                    <li><i class="fas fa-check"></i> Hosting + SSL (1 año)</li>
+                                </ul>
+                                <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Start2GO%20de%20Sitios."
+                                    class="btn btn-secondary"
+                                    style="color: white; border-color: white; width: 100%; margin-top: auto;">Elegir
+                                    Plan</a>
+                            </div>
+
+                            <div class="package-card fade-in">
+                                <h3>Biz2GO</h3>
+                                <p>Web Institucional</p>
+                                <div class="package-price">2.900.000 <span>Gs.</span></div>
+                                <ul class="package-features">
+                                    <li><i class="fas fa-check"></i> Hasta 3 Secciones Pro</li>
+                                    <li><i class="fas fa-check"></i> Blog Autogestionable</li>
+                                    <li><i class="fas fa-check"></i> Google Maps Integrado</li>
+                                    <li><i class="fas fa-check"></i> Dominio .COM Incluido</li>
+                                </ul>
+                                <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Biz2GO%20de%20Sitios."
+                                    class="btn btn-secondary"
+                                    style="color: white; border-color: white; width: 100%; margin-top: auto;">Elegir
+                                    Plan</a>
+                            </div>
+
+                            <div class="package-card featured fade-in"
+                                style="background: rgba(1, 167, 238, 0.15); border-color: var(--color-primary);">
+                                <div
+                                    style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">
+                                    MÁS POPULAR</div>
+                                <h3>Pro2GO</h3>
+                                <p>Web Corporativa Premium</p>
+                                <div class="package-price">3.900.000 <span>Gs.</span></div>
+                                <ul class="package-features">
+                                    <li><i class="fas fa-check"></i> Secciones Ilimitadas</li>
+                                    <li><i class="fas fa-check"></i> SEO Técnico Avanzado</li>
+                                    <li><i class="fas fa-check"></i> Diseño UI/UX Custom</li>
+                                    <li><i class="fas fa-check"></i> Soporte Prioritario</li>
+                                </ul>
+                                <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Pro2GO%20de%20Sitios."
+                                    class="btn btn-primary" style="width: 100%; margin-top: auto;">Elegir Plan</a>
+                            </div>
                         </div>
 
-                        <div class="package-card fade-in">
-                            <h3>Biz2GO</h3>
-                            <p style="color: rgba(255,255,255,0.7);">Web Institucional</p>
-                            <div class="package-price">2.900.000 <span>Gs.</span></div>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check"></i> Hasta 3 Secciones Pro</li>
-                                <li><i class="fas fa-check"></i> Blog Autogestionable</li>
-                                <li><i class="fas fa-check"></i> Google Maps Integrado</li>
-                                <li><i class="fas fa-check"></i> Dominio .COM Incluido</li>
-                            </ul>
-                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Biz2GO%20de%20Sitios."
-                                class="btn btn-secondary" style="color: white; border-color: white; width: 100%;">Elegir
-                                Plan</a>
-                        </div>
+                        <!-- ROW 2: The 2 Advanced Plans -->
+                        <div class="pricing-row-2">
+                            <div class="package-card-wrapper">
+                                <div class="package-card fade-in">
+                                    <h3>Market2GO</h3>
+                                    <p>E-commerce Potente</p>
+                                    <div class="package-price">6.500.000 <span>Gs.</span></div>
+                                    <ul class="package-features">
+                                        <li><i class="fas fa-check"></i> Carrito de Compras</li>
+                                        <li><i class="fas fa-check"></i> Gestión de Inventario</li>
+                                        <li><i class="fas fa-check"></i> Pasarelas de Pago</li>
+                                        <li><i class="fas fa-check"></i> Panel Administrativo</li>
+                                    </ul>
+                                    <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Market2GO%20de%20Sitios."
+                                        class="btn btn-secondary"
+                                        style="color: white; border-color: white; width: 100%; margin-top: auto;">Consultar</a>
+                                </div>
+                            </div>
 
-                        <div class="package-card featured fade-in">
-                            <div
-                                style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">
-                                MÁS POPULAR</div>
-                            <h3>Pro2GO</h3>
-                            <p style="color: rgba(255,255,255,0.7);">Web Corporativa Premium</p>
-                            <div class="package-price">3.900.000 <span>Gs.</span></div>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check"></i> Secciones Ilimitadas</li>
-                                <li><i class="fas fa-check"></i> SEO Técnico Avanzado</li>
-                                <li><i class="fas fa-check"></i> Diseño UI/UX Custom</li>
-                                <li><i class="fas fa-check"></i> Soporte Prioritario</li>
-                            </ul>
-                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Pro2GO%20de%20Sitios."
-                                class="btn btn-primary" style="width: 100%;">Elegir Plan</a>
-                        </div>
-
-                        <div class="package-card fade-in">
-                            <h3>Market2GO</h3>
-                            <p style="color: rgba(255,255,255,0.7);">E-commerce Potente</p>
-                            <div class="package-price">6.500.000 <span>Gs.</span></div>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check"></i> Carrito de Compras</li>
-                                <li><i class="fas fa-check"></i> Gestión de Inventario</li>
-                                <li><i class="fas fa-check"></i> Pasarelas de Pago</li>
-                                <li><i class="fas fa-check"></i> Panel Administrativo</li>
-                            </ul>
-                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20Market2GO%20de%20Sitios."
-                                class="btn btn-secondary"
-                                style="color: white; border-color: white; width: 100%;">Consultar</a>
-                        </div>
-
-                        <div class="package-card fade-in">
-                            <h3>e-commerce2GO</h3>
-                            <p style="color: rgba(255,255,255,0.7);">Plataforma B2B / ERP</p>
-                            <div class="package-price">12.500.000 <span>Gs.</span></div>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check"></i> Integración Hubspot/CRM</li>
-                                <li><i class="fas fa-check"></i> Sistema Multi-Vendors</li>
-                                <li><i class="fas fa-check"></i> Automatización de Ventas</li>
-                                <li><i class="fas fa-check"></i> Desarrollo a Medida</li>
-                            </ul>
-                            <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20e-commerce2GO%20de%20Sitios."
-                                class="btn btn-secondary"
-                                style="color: white; border-color: white; width: 100%;">Consultar</a>
+                            <div class="package-card-wrapper">
+                                <div class="package-card fade-in">
+                                    <h3>e-commerce2GO</h3>
+                                    <p>Plataforma B2B / ERP</p>
+                                    <div class="package-price">12.500.000 <span>Gs.</span></div>
+                                    <ul class="package-features">
+                                        <li><i class="fas fa-check"></i> Integración Hubspot/CRM</li>
+                                        <li><i class="fas fa-check"></i> Sistema Multi-Vendors</li>
+                                        <li><i class="fas fa-check"></i> Automatización de Ventas</li>
+                                        <li><i class="fas fa-check"></i> Desarrollo a Medida</li>
+                                    </ul>
+                                    <a href="https://wa.me/595983500802?text=¡Hola!%20Me%20interesa%20el%20plan%20e-commerce2GO%20de%20Sitios."
+                                        class="btn btn-secondary"
+                                        style="color: white; border-color: white; width: 100%; margin-top: auto;">Consultar</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

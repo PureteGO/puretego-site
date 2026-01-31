@@ -56,9 +56,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap">
   </noscript>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/strategy.css">
+
+  <!-- Preload Critical Hero Image for LCP -->
+  <link rel="preload" as="image" href="img/hero/tech-bg.webp">
 
   <!-- Schema.org LocalBusiness (Expanded) -->
   <script type="application/ld+json">
@@ -190,9 +196,9 @@
   <!-- Hero Section with Premium Slideshow -->
   <section class="hero">
     <div class="hero-bg-container">
-      <div class="hero-slide active" style="background-image: url('img/hero/tech-bg.png');"></div>
-      <div class="hero-slide" style="background-image: url('img/hero/growth-bg.png');"></div>
-      <div class="hero-slide" style="background-image: url('img/hero/paraguay-bg.png');"></div>
+      <div class="hero-slide active" style="background-image: url('img/hero/tech-bg.webp');"></div>
+      <div class="hero-slide" style="background-image: url('img/hero/growth-bg.webp');"></div>
+      <div class="hero-slide" style="background-image: url('img/hero/paraguay-bg.webp');"></div>
     </div>
 
     <div class="container">
@@ -382,9 +388,10 @@
         <!-- Left: Success Showcase (Phone) -->
         <div class="testimonials-phone-column fade-in">
           <div class="success-mockup-container">
-            <img src="img/Mockup2.png" alt="Caso de éxito" class="success-mockup-frame">
+            <img src="img/Mockup2.webp" alt="Caso de éxito" class="success-mockup-frame" loading="lazy" width="350"
+              height="700">
             <div class="success-video-wrapper">
-              <video id="successVideo" autoplay muted loop playsinline poster="img/capavideosmartphone.png"
+              <video id="successVideo" autoplay muted loop playsinline poster="img/capavideosmartphone.webp"
                 class="success-video-element">
                 <source src="img/PureteGONegocioLocal.mp4" type="video/mp4">
               </video>
