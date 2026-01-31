@@ -11,9 +11,16 @@
 - [x] **Validar Blog**: Todos los links internos del blog y artículos están funcionando con rutas relativas correctas.
 - [x] **Video Smartphone**: Mockup actualizado (Mockup2.png), controles UI mejorados (SVG) y alineación perfecta corregida.
 - [x] **Google Badges**: Arreglados enlaces rotos (AI, Developer) moviendo imágenes a carpeta `img/`.
+- [x] **reCAPTCHA v3**: Integración completa (invisible) en formulario de contacto, solucionando error de "clave no válida".
+- [x] **Formulario AJAX**: Implementado envío asíncrono sin recarga de página ni JSON visible.
+- [x] **Mobile UX**: Ajuste de Z-Index en video smartphone, botones flotantes y badges del footer (wrap).
+- [x] **Mapa Waze**: Implementado iframe de Waze con pin y zoom 12 en página de contacto.
 
+## 🔜 Próximos Pasos (Prioritarios)
+
+- [ ] **Footer Global**: Actualizar enlace de email (a `contacto.html`) en TODAS las páginas del sitio (actualmente solo en contacto.html).
+- [ ] **Verificación Caché**: Confirmar funcioamiento de formulario en dispositivo limpio/incógnito.
 - [ ] **Google Analytics**: Verificar se o script GA4 (G-Q84QCMPH42) está coletando dados no painel.
-- [ ] **Teste de E-mail**: Validar funcionamento do PHPMailer no ambiente de produção.
 - [ ] **Revisión Final**: Prueba de navegación completa mobile y desktop.
 
 ## 📝 Notas Técnicas
