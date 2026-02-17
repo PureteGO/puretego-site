@@ -22,6 +22,7 @@
 - [ ] **Verificación Caché**: Confirmar funcioamiento de formulario en dispositivo limpio/incógnito.
 - [ ] **Google Analytics**: Verificar se o script GA4 (G-Q84QCMPH42) está coletando dados no painel.
 - [ ] **Revisión Final**: Prueba de navegación completa mobile y desktop.
+- [ ] **Links Central de Clientes**: Aguardar lista de links de produtos do usuário para atualizar todos os botões do site.
 
 ## 📝 Notas Técnicas
 
