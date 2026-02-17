@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
   initCounters();
   initVideoControls();
   initContactPageForm();
+  if (window.location.pathname.includes('/blog/')) {
+    initBlogFilters();
+  }
 });
 
 /* ===== Hero Dynamic Slideshow ===== */
@@ -477,4 +480,34 @@ function initVideoControls() {
   // Inicializar iconos
   updateMuteIcon();
   updatePlayIcon();
+}
+
+/* ===== Blog Category Filtering ===== */
+function initBlogFilters() {
+  const categoryLinks = document.querySelectorAll('.category-list a');
+  const articles = document.querySelectorAll('.blog-article');
+
+  if (!categoryLinks.length || !articles.length) return;
+
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const category = this.textContent.trim().toLowerCase();
+
+      // Update active state
+      categoryLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+
+      // Filter articles
+      articles.forEach(article => {
+        const meta = article.querySelector('.blog-article-meta').textContent.toLowerCase();
+        if (category === 'todos' || meta.includes(category)) {
+          article.style.display = '';
+          article.classList.add('fade-in');
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  });
 }
