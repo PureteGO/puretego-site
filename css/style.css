@@ -2460,3 +2460,67 @@ h6 {
     padding: 1.5rem;
   }
 }
+
+/* ===== Area de Cobertura Section ===== */
+.section-cobertura {
+  background: var(--color-white);
+  padding: 8rem 0;
+}
+
+.cobertura-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cobertura-city {
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.cobertura-city:hover {
+  transform: translateY(-3px);
+  background: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(1, 167, 238, 0.1);
+}
+
+.cobertura-city strong {
+  color: var(--color-secondary);
+}
+
+.city-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(1, 167, 238, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.cobertura-text-optimized {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+.cobertura-text-optimized em {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-style: normal;
+}
