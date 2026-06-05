@@ -1,0 +1,215 @@
+CHECKING EXACT MENU LISTS:
+
+==================== index.html ==================== (len: 1271)
+<ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item">
+              <a href="#servicios" class="nav-link">Servicios ▾</a>
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                <a href="servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                <a href="servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                <div class="nav-dropdown-divider"></div>
+                <div class="nav-dropdown-title">Infraestructura</div>
+                <a href="servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+              </div>
+            </li>
+            <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            <li class="mobile-only"><button class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</button>
+            </li>
+          </ul>
+
+==================== nosotros.html ==================== (len: 1600)
+<ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== contacto.html ==================== (len: 1585)
+<ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                        <li class="mobile-only"><a href="#contactPageForm" class="btn btn-primary btn-consultoria-mobile">Consultoría
+                                Gratis</a></li>
+                    </ul>
+
+==================== servicios/geomarketing.html ==================== (len: 1568)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== servicios/perfil-empresarial.html ==================== (len: 1568)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== servicios/marketing-digital.html ==================== (len: 1568)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== servicios/creacion-sitios.html ==================== (len: 1568)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== servicios/hospedaje-web.html ==================== (len: 1568)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>
+
+==================== blog/index.html ==================== (len: 1625)
+<ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <a href="../index.html#servicios" class="nav-link">Servicios ▾</a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-title">Nuestras Soluciones</div>
+                                <a href="../servicios/geomarketing.html">GeoMarketing y SEO Local</a>
+                                <a href="../servicios/perfil-empresarial.html">Perfil Empresarial Pro</a>
+                                <a href="../servicios/marketing-digital.html">Gestión de Tráfico Pago</a>
+                                <a href="../servicios/creacion-sitios.html">Desarrollo Web Premium</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-title">Infraestructura</div>
+                                <a href="../servicios/hospedaje-web.html">Hospedaje Gerenciado</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="index.html" class="nav-link">Blog</a></li>
+                        <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="mobile-only"><a href="../contacto.html"
+                                class="btn btn-primary btn-consultoria-mobile">Consultoría Gratis</a>
+                        </li>
+                    </ul>

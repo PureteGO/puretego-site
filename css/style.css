@@ -1490,6 +1490,65 @@ h6 {
     border-bottom: 2px solid var(--color-primary);
   }
 
+  /* Mobile Dropdown Accordion */
+  .nav-dropdown {
+    position: static;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-width: 100%;
+    display: none;
+  }
+
+  .nav-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    display: block;
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .nav-item:hover .nav-dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-item:hover .nav-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-dropdown a {
+    padding: var(--space-2) 0;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: normal;
+    font-size: var(--text-sm);
+  }
+
+  .nav-dropdown a:hover {
+    padding-left: var(--space-2);
+    background: transparent;
+  }
+
+  .nav-dropdown-title {
+    padding: var(--space-2) 0 var(--space-1);
+    font-size: var(--text-xs);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: var(--space-1);
+  }
+
+  .nav-dropdown-divider {
+    margin: var(--space-2) 0;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
   .nav-list .btn-primary {
     display: flex;
     margin-top: var(--space-4);

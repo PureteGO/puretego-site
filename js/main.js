@@ -69,8 +69,28 @@ function initMobileMenu() {
     }
   });
 
+  // Handle dropdown toggle on mobile
+  const servicesTrigger = navList.querySelector('.nav-item > a');
+  if (servicesTrigger) {
+    servicesTrigger.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        const dropdown = this.nextElementSibling;
+        if (dropdown) {
+          dropdown.classList.toggle('active');
+          this.parentElement.classList.toggle('active');
+        }
+      }
+    });
+  }
+
   navList.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      // If mobile trigger click, don't close the main menu
+      if (window.innerWidth <= 768 && link.parentElement.classList.contains('nav-item')) {
+        return;
+      }
       navList.classList.remove('active');
       menuToggle.classList.remove('active');
       const spans = menuToggle.querySelectorAll('span');
