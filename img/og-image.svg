@@ -1,0 +1,44 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c0c0d"/>
+      <stop offset="50%" style="stop-color:#0a192f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#01a7ee"/>
+      <stop offset="100%" style="stop-color:#00d4aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="1000" cy="100" r="300" fill="#01a7ee" opacity="0.08"/>
+  <circle cx="200" cy="500" r="200" fill="#00d4aa" opacity="0.06"/>
+  <circle cx="1100" cy="500" r="150" fill="#01a7ee" opacity="0.04"/>
+  <!-- Logo area -->
+  <text x="80" y="160" font-family="Outfit, Arial, sans-serif" font-weight="800" font-size="64" fill="white">Purete</text>
+  <text x="80" y="230" font-family="Outfit, Arial, sans-serif" font-weight="300" font-size="64" fill="url(#accent)">.Online</text>
+  <!-- Tagline -->
+  <text x="80" y="320" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="28" fill="#9ca3af">Agencia de Marketing Digital</text>
+  <text x="80" y="370" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="36" fill="white">SEO Local · GeoMarketing · Web</text>
+  <!-- Badge area -->
+  <rect x="80" y="440" width="280" height="70" rx="35" fill="url(#accent)" opacity="0.15"/>
+  <text x="220" y="485" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="22" fill="#01a7ee" text-anchor="middle">⚡ Paraguay &amp; Brasil</text>
+  <!-- Decorative dots grid -->
+  <g opacity="0.15">
+    <circle cx="900" cy="300" r="4" fill="#01a7ee"/>
+    <circle cx="960" cy="300" r="4" fill="#01a7ee"/>
+    <circle cx="1020" cy="300" r="4" fill="#01a7ee"/>
+    <circle cx="1080" cy="300" r="4" fill="#01a7ee"/>
+    <circle cx="900" cy="360" r="4" fill="#00d4aa"/>
+    <circle cx="960" cy="360" r="4" fill="#00d4aa"/>
+    <circle cx="1020" cy="360" r="4" fill="#00d4aa"/>
+    <circle cx="1080" cy="360" r="4" fill="#00d4aa"/>
+    <circle cx="900" cy="420" r="4" fill="#01a7ee"/>
+    <circle cx="960" cy="420" r="4" fill="#01a7ee"/>
+    <circle cx="1020" cy="420" r="4" fill="#01a7ee"/>
+    <circle cx="1080" cy="420" r="4" fill="#01a7ee"/>
+  </g>
+  <!-- Bottom accent bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="url(#accent)"/>
+</svg>
