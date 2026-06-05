@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
+# Desbloquear recursos essenciais
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /fonts/
+
+# Desactivar URLs sensibles
+Disallow: /central/
+Disallow: /cgi-bin/
+
+# Sitemaps
 Sitemap: https://www.puretego.online/sitemap.xml
+
+# Zona horaria y frecuencia
+Crawl-Delay: 10
