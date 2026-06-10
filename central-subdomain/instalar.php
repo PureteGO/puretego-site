@@ -138,6 +138,7 @@ try {
     echo "<p><strong>Email:</strong> janae@puretego.online</p>";
     echo "<p><strong>Senha:</strong> MeLu_1723\$</p>";
     echo "<p class='erro' style='font-size:18px'>⚠️ DELETE ESTE ARQUIVO AGORA!</p>";
+    // Trigger deploy check
     echo "</div>";
     
 } catch (Exception $e) {
