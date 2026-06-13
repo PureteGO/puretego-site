@@ -64,7 +64,7 @@
     color: white;
 }
 
-.comparison-content h4 {
+.comparison-content h3 {
     margin-bottom: var(--space-2);
     font-size: var(--text-xl);
     color: white !important;
