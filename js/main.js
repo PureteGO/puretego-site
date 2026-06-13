@@ -23,8 +23,70 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   if (window.location.pathname.includes('/blog/')) {
     initBlogFilters();
+    initDownloadForm();
   }
 });
+
+/* ===== Blog Download Form Logic ===== */
+function initDownloadForm() {
+  const form = document.getElementById('downloadForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Enviando...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    // Explicitly set the email receiver to contacto@puretego.online
+    formData.append('form_type', 'Nuevo Download de articulos del Blog PureteGO.Online');
+
+    // Send data to the PHP mailer
+    fetch('../../php/send-mail.php', { method: 'POST', body: formData })
+      .then(response => {
+        // Prepare the WhatsApp message
+        const nombre = formData.get('nombre');
+        const reporte = formData.get('reporte');
+        const waMessage = `¡Hola! 👋 He descargado el reporte: "${reporte}". Soy ${nombre}.`;
+        
+        // Show success alert
+        alert('¡Gracias! El reporte ha sido enviado a tu email y WhatsApp, y la descarga comenzará enseguida.');
+
+        // Determine which PDF to download based on the report name
+        let pdfUrl = '';
+        if (reporte.includes('Hábitos')) {
+            pdfUrl = '../../informe-habitos-consumo.pdf';
+        } else {
+            pdfUrl = '../../informe-uso-internet.pdf';
+        }
+
+        // Trigger the download automatically
+        const a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = pdfUrl.split('/').pop();
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        form.reset();
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // Optionally redirect to WhatsApp
+        setTimeout(() => {
+          openWhatsApp(waMessage);
+        }, 2000);
+      })
+      .catch(err => {
+        console.error('Error al enviar el formulario de descarga:', err);
+        alert('Ocurrió un error al procesar tu solicitud. Por favor, intenta de nuevo.');
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
+}
 
 /* ===== Hero Dynamic Slideshow ===== */
 function initHeroSlideshow() {
