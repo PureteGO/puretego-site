@@ -466,6 +466,205 @@
             <p>Con un mercado de 2.000 millones de dólares en pleno desarrollo, el consumidor paraguayo ya no busca solo en redes. Busca activamente soluciones inmediatas en Google y valida la seriedad de los e-commerce a través de su historial, reputación y geolocalización. Si tu empresa no tiene presencia web optimizada y perfil de Google activo, estás regalándole este mercado a tu competencia.</p>
         </div>
 
+        <!-- Download PDF Report Form Block -->
+        <div class="download-report-box" style="
+            background: #ffffff;
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            margin: 3.5rem 0;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        ">
+            <!-- decorative background accent -->
+            <div style="
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 150px;
+                height: 150px;
+                background: radial-gradient(circle, rgba(1, 167, 238, 0.15) 0%, transparent 70%);
+                pointer-events: none;
+            "></div>
+
+            <h3 style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                color: var(--color-primary);
+                font-family: var(--font-display);
+                font-size: 1.6rem;
+                font-weight: 700;
+            ">Descargá el Informe Completo (PDF)</h3>
+            
+            <p style="
+                font-size: 1.05rem;
+                line-height: 1.6;
+                color: rgba(12, 12, 13, 0.85);
+                margin-bottom: 1.5rem;
+            ">
+                Ingresá tus datos para recibir el estudio completo y detallado en PDF directamente en tu correo electrónico y WhatsApp, y descargarlo al instante.
+            </p>
+
+            <form id="downloadForm" style="
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            ">
+                <input type="hidden" name="reporte" value="Uso de Internet en Paraguay (Actualización 2026)">
+
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="nombre" style="font-weight: 600; font-size: 0.95rem; color: var(--color-secondary); text-align: left;">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" style="
+                        padding: 0.8rem 1rem;
+                        border: 1px solid rgba(0,0,0,0.15);
+                        border-radius: var(--radius-md);
+                        font-family: var(--font-primary);
+                        font-size: 1rem;
+                        outline: none;
+                        transition: border-color var(--transition-fast);
+                        width: 100%;
+                    " onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="email" style="font-weight: 600; font-size: 0.95rem; color: var(--color-secondary); text-align: left;">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="Ej. juan@correo.com.py" style="
+                            padding: 0.8rem 1rem;
+                            border: 1px solid rgba(0,0,0,0.15);
+                            border-radius: var(--radius-md);
+                            font-family: var(--font-primary);
+                            font-size: 1rem;
+                            outline: none;
+                            transition: border-color var(--transition-fast);
+                            width: 100%;
+                        " onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="whatsapp" style="font-weight: 600; font-size: 0.95rem; color: var(--color-secondary); text-align: left;">WhatsApp *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Ej. 0983 123456" style="
+                            padding: 0.8rem 1rem;
+                            border: 1px solid rgba(0,0,0,0.15);
+                            border-radius: var(--radius-md);
+                            font-family: var(--font-primary);
+                            font-size: 1rem;
+                            outline: none;
+                            transition: border-color var(--transition-fast);
+                            width: 100%;
+                        " onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'">
+                    </div>
+                </div>
+
+                <div style="
+                    font-size: 0.85rem;
+                    color: rgba(12, 12, 13, 0.6);
+                    margin-bottom: 0.25rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    text-align: left;
+                ">
+                    <i class="fas fa-info-circle" style="color: var(--color-primary);"></i>
+                    <span>Te enviaremos el reporte por correo y por WhatsApp.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="
+                    border-radius: var(--radius-md);
+                    padding: 0.9rem;
+                    font-size: 1.1rem;
+                    justify-content: center;
+                    width: 100%;
+                    background: var(--gradient-primary);
+                    color: white;
+                    font-weight: 700;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: var(--shadow-md);
+                    transition: all var(--transition-base);
+                ">
+                    Registrar y Descargar Informe
+                </button>
+            </form>
+
+            <div id="downloadSuccess" style="
+                display: none;
+                text-align: center;
+                padding: 1.5rem 0;
+            ">
+                <div style="
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(16, 185, 129, 0.1);
+                    color: var(--color-success);
+                    border-radius: var(--radius-full);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.8rem;
+                    margin: 0 auto 1rem;
+                ">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h4 style="color: var(--color-success); margin-bottom: 0.5rem; font-size: 1.3rem;">¡Registro Exitoso!</h4>
+                <p style="font-size: 1.05rem; color: rgba(12, 12, 13, 0.8); margin-bottom: 1.5rem;">
+                    Tu descarga comenzará en unos segundos. También te enviamos el archivo a tu correo y por WhatsApp.
+                </p>
+                <a id="directDownloadLink" href="../../Informe_Detallado_sobre_el_Uso_de_Internet_en_Paraguay_(Actualización_2026).pdf" download class="btn btn-primary" style="
+                    border-radius: var(--radius-md);
+                    padding: 0.8rem 1.5rem;
+                    font-size: 1rem;
+                ">
+                    ¿No inició la descarga? Hacé clic acá
+                </a>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('downloadForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Enviando registro...';
+
+                const formData = new FormData(form);
+
+                fetch('../../php/send-download.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Ocultar formulario
+                        form.style.display = 'none';
+                        // Mostrar mensagem de sucesso
+                        const successDiv = document.getElementById('downloadSuccess');
+                        successDiv.style.display = 'block';
+                        
+                        // Iniciar a descarga do PDF
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = successDiv.querySelector('#directDownloadLink').getAttribute('href');
+                        downloadLink.download = '';
+                        document.body.appendChild(downloadLink);
+                        downloadLink.click();
+                        document.body.removeChild(downloadLink);
+                    } else {
+                        alert('Error: ' + data.message);
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Registrar y Descargar Informe';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Ocurrió un error al procesar el registro. Por favor, intentá de nuevo.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = 'Registrar y Descargar Informe';
+                });
+            });
+        </script>
+
         <!-- FAQ Section for AEO Optimization -->
         <section class="faq-section">
             <h2>Preguntas Frecuentes sobre el Mercado Digital Paraguayo (FAQ)</h2>
