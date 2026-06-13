@@ -4,5 +4,6 @@ Website institucional da PureteGO.
 
 ## Deployment
 
-Deployment is automated via GitHub Actions using FTP.
-Any push to the `main` branch will trigger a deployment to cPanel.
+Deployment is performed securely via SSH by the Antigravity agent.
+No SSH keys or credentials are to be stored in GitHub Actions or any other public repository.
+To trigger a deployment, request the agent to deploy the latest changes to the VPS.
