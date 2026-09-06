@@ -6,16 +6,36 @@ ErrorDocument 403 /404.html
 
 RewriteEngine On
 
-# Redirecionar para www
-RewriteCond %{HTTP_HOST} !^www\\. [NC]
+# 1. Forçar HTTPS e www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.puretego.online/$1 [R=301,L]
+
+# 2. Canônica limpa (elimina duplicados index.html e blog/index.html)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.puretego.online/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+blog/index\.html[\s?] [NC]
+RewriteRule ^blog/index\.html$ https://www.puretego.online/blog/ [R=301,L]
+
+# 3. Redirecionamentos 301 de URLs antigas e 404s rastreados
+RewriteRule ^servicios/planes-hosting\.html/?$ https://www.puretego.online/servicios/hospedaje-web.html [R=301,L]
+RewriteRule ^index\.php/?$ https://www.puretego.online/ [R=301,L]
+RewriteRule ^articulos/(.*)$ https://www.puretego.online/blog/articulos/$1 [R=301,L]
+RewriteRule ^feed/?$ https://www.puretego.online/blog/ [R=301,L]
+RewriteRule ^comments/feed/?$ https://www.puretego.online/blog/ [R=301,L]
+
+# Bloquear acesso público a arquivos de teste e rascunho
+RewriteRule ^(.*)(_backup|_fixed|_new)\.html$ - [F,L]
+RewriteRule ^(check_|debug_|process_|restore_|manage_|force_|generate_|nuclear_).*\.(py|js)$ - [F,L]
+RewriteRule ^(git_|file_|nav_|log_|temp_|test\.).*\.txt$ - [F,L]
 
 # Comprimir arquivos estáticos
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# Cache de imagens
+# Cache de arquivos estáticos
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/webp "access plus 1 year"
